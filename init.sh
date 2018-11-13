@@ -46,3 +46,7 @@ cd libc-database
 ./get
 cd
 
+# pwngdb
+cd ~/
+git clone https://github.com/scwuaptx/Pwngdb.git 
+cp ~/Pwngdb/.gdbinit ~/
