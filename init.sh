@@ -50,3 +50,8 @@ cd
 cd ~/
 git clone https://github.com/scwuaptx/Pwngdb.git 
 cp ~/Pwngdb/.gdbinit ~/
+
+# seccomp
+cd
+sudo apt-get install -y ruby-dev
+sudo gem install seccomp-tools
