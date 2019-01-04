@@ -1,0 +1,28 @@
+
+//Problem1479
+
+
+#include<stdio.h>
+int main()
+{
+	int n, m,t,i,l;
+	scanf("%d %d", &n, &m);
+	for (i = 1; i < m; i++)
+	{
+		if(m%i==0&&n%i==0)
+		{
+			t = i;
+		}
+	}printf("%d ", t);
+	for (i = m; i <= m*n; i++)
+	{
+		if (i%n == 0 && i%m == 0)
+		{
+			printf("%d", i);
+			break;
+		}
+	}
+}
+
+
+

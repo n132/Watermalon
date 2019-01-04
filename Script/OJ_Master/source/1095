@@ -1,0 +1,27 @@
+
+//Problem1095
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+int main(void)
+{
+    char a[100];
+    int i, k;
+    gets(a);
+    k = strlen(a);
+    for (i = 0; i < k; i++)
+    {
+        if (a[i] >= 'A'&&a[i] <= 'z')
+        {
+            printf("%c", a[i]);
+        }
+    }
+}
+
+
+
+
+

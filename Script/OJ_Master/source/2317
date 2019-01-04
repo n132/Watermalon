@@ -1,0 +1,40 @@
+
+//Problem2317
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+int i;
+int k, l;
+char *p;
+char *c;
+int time = 0;
+char ts[24];
+char a[24];
+scanf("%s", ts);
+scanf("%s", a);
+k = strlen(ts);
+l = strlen(a);
+for (p = ts; p < ts + k; p++)
+{
+c = a;
+for (i = 0; i< l; i++)
+{
+if (*(c + i) != *(p + i))
+break;
+}
+
+if (i == l){
+time++;
+}
+
+}
+printf("%d", time);
+
+
+}
+
+
+

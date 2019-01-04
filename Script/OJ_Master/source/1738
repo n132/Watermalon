@@ -1,0 +1,29 @@
+
+//Problem1738
+
+
+#include<stdio.h>
+int main()
+{
+	int n;
+	int min = 9999;
+	scanf("%d", &n);
+	int a[1000];
+	for (int i = 0; i < n; i++)
+	{
+		scanf("%d", &a[i]);
+		if (a[i] < min)
+		{
+			min = a[i];
+		}
+	}
+	printf("%d ", min);
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i] != min)
+			printf("%d ", a[i]);
+	}
+}
+
+
+

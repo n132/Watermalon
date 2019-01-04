@@ -1,0 +1,39 @@
+
+//Problem1771
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char a[1000];
+	char n[1000];
+	while (gets(a)!=NULL)
+	{
+		gets(n);
+		int ct = 0;
+		int la = strlen(a);
+		int ln = strlen(n);
+		char *p = a;
+		while (p+ln<=a+la)
+		{
+			int i;
+			for (i = 0; i < ln; i++)
+			{
+				if (*(p + i) != *(n + i))
+				{
+					break;
+				}
+			 }
+			if (i == ln)
+				ct++;
+			p++;
+		}
+		printf("%d\n", ct);
+
+	}
+}
+
+
+
+

@@ -1,0 +1,35 @@
+
+//Problem1183
+
+
+
+
+#include<string.h>
+#include<stdio.h>
+int main()
+{
+	int i,h=0;
+	char n[10000];
+	int a=1, b=0;
+	gets(n);
+	for (i = 0; i < strlen(n); i++)
+	{
+		if (n[i] != ' ')
+		{
+			b = 1;
+			if (a == 1 && b == 1)
+				h++;
+		}
+		if (n[i] == ' ')
+			a = 1;
+		else
+			a = 0;
+
+	}
+	printf("%d", h);
+}
+
+
+
+
+

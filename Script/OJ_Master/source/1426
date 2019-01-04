@@ -1,0 +1,32 @@
+
+//Problem1426
+
+
+#include<stdio.h>
+float fact(float n);
+
+int main()
+{
+
+
+	int m,n ;
+	float c;
+	scanf("%d %d", &m, &n);
+
+	c = fact(m) / (fact(n)*fact(m - n));
+	printf("%.0lf", c);
+
+}
+float fact(float n)
+{
+	int i ;
+	float p;
+
+		 p = 1;
+	for (i = 1; i <= n; ++i)
+		p = p*i;
+	return p;
+}
+
+
+

@@ -1,0 +1,31 @@
+
+//Problem1772
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	int k;
+	char t;
+	int i;
+	char n[10000];
+	gets(n);
+	for ( i = 0; i < strlen(n)-1; i++)
+	{
+		for (k = 0; k < strlen(n) - i - 1; k++)
+		{
+			if (n[k] > n[strlen(n) - 1 - i])
+			{
+				t = n[k];
+				n[k] = n[strlen(n) - 1 - i];
+				n[strlen(n) - 1 - i] = t;
+			}
+		}
+	}
+	for (i = 0; i < strlen(n); i++)
+		printf("%c", n[i]);
+}
+
+
+

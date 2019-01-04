@@ -1,0 +1,74 @@
+
+//Problem2189
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    struct cj
+    {
+        char a[100];
+        int fs;
+    }stu[1000];
+    int i = 0;
+    while (scanf("%s", stu[i].a)||1)
+    {
+        if (stu[i].a[0] == '#')
+        {
+            break;
+        }
+        scanf("%d", &stu[i].fs);
+         
+        i++;
+         
+    }
+    i++;
+    while (scanf("%s", stu[i].a) || 1)
+    {
+        if (stu[i].a[0] == '#')
+        {
+            break;
+        }
+        scanf("%d", &stu[i].fs);
+        i++;
+    }
+    i++;
+    char shanchu[1000] = {'\0'};
+    while (scanf("%s", shanchu) || 1)
+    {
+        if (shanchu[0] == '#')break;
+        for(int k=0;k<i;k++)
+            if (strcmp(stu[k].a, shanchu) == 0)
+            {
+                stu[k].a[0] = '#';
+            }
+         
+    }
+    for (int g = 0; g < i-1; g++)
+    {
+        for (int k = 0; k < i - 1 - g; k++)
+        {
+            if (stu[k].fs < stu[i - 1 - g].fs)
+            {
+                int cc;
+                cc = stu[k].fs;
+                stu[k].fs = stu[i - 1 - g].fs;
+                stu[i - 1 - g].fs = cc;
+                char zhuanhuan[1000];
+                strcpy(zhuanhuan, stu[k].a);
+                strcpy(stu[k].a, stu[i-1-g].a);
+                strcpy(stu[i - 1 - g].a, zhuanhuan);
+ 
+            }
+        }
+    }
+    for (int g = 0; g < i; g++)
+    {
+        if (stu[g].a[0] != '#')
+            printf("%s %d\n", stu[g].a, stu[g].fs);
+    }
+}
+
+
+

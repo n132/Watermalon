@@ -1,0 +1,38 @@
+
+//Problem1856
+
+
+#include<stdio.h>
+int main()
+{
+	int std;
+	int i = 0;
+	int n[1000], m;
+	int max ;
+	while (scanf("%d", &n[i]) != EOF)
+	{
+		i++;
+	}
+	max=m = n[0];
+	
+	for (int k = 1; k < i; k++)
+	{
+		if (n[k] < m + n[k])
+		{
+			m = n[k] + m;
+		}
+		else
+		{
+			if (m + n[k] < n[k])
+				m = n[k];
+			
+
+		}
+		if (m > max)
+			max = m;
+	}
+	printf("%d\n", max);
+}
+
+
+

@@ -1,0 +1,41 @@
+
+//Problem1067
+
+
+
+
+#include<stdio.h>
+char t(int n)
+{
+	int t;
+	t = n / 10;
+	if (t < 6)
+		printf("E\n");
+	if (t == 6)
+		printf("D\n");
+	if (t == 7)
+		printf("C\n");
+	if (t == 8)
+		printf("B\n");
+	if (t == 9)
+		printf("A\n");
+	if (t == 10)
+		printf("A\n");
+	return 0;
+}
+int main()
+{
+	int i;
+
+	while (scanf("%d", &i) != EOF)
+	{
+		if (i <= 100 && i >= 0)
+			t(i);
+		else printf("Score is error!\n");
+	}
+}
+
+
+
+
+

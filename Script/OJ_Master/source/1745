@@ -1,0 +1,22 @@
+
+//Problem1745
+
+
+#include<stdio.h>
+int main()
+
+{
+	int a[1000];
+	int i = 0;
+	while (scanf("%d",&a[i])!=EOF)
+	{
+		i++;
+	}
+	for (int k = 0; k < i; k++)
+	{
+		printf("%d ", a[k]);
+	}
+}
+
+
+

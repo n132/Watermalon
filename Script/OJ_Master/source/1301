@@ -1,0 +1,61 @@
+
+//Problem1301
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    struct cp
+    {
+        char a[1000];
+        int h;
+        int m;
+    }yy[1000];
+    int n;
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%s%d%d", yy[i].a, &yy[i].h, &yy[i].m);
+    }
+    char flag[1000] = "Suxiao";
+    int hb,mb;
+    for (int i = 0; i < n; i++)
+    {
+        if (strcmp(yy[i].a, flag) == 0)
+        {
+            hb = yy[i].h;
+            mb = yy[i].m;
+        }
+    }
+    int max = 0;
+    int rankh = 0,rankm=0;
+    for (int i = 0; i < n; i++)
+    {
+        if (yy[i].h > hb)
+        {
+            rankh++;
+        }
+        if (yy[i].m > mb)
+        {
+            rankm++;
+        }
+    }
+    if (rankh > rankm)
+    {
+        printf("MONEY\n");
+    }
+    else if (rankh < rankm)
+    {
+        printf("HEIGHT\n");
+    }
+    else
+        printf("EQ\n");
+}
+
+
+
+
+

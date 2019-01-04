@@ -1,0 +1,25 @@
+
+//Problem1915
+
+
+#include<stdio.h>
+int main()
+{ 
+	int n,m;
+	scanf("%d", &n);
+	m = n / 10;
+	if (m < 6)
+		printf("1");
+	else if (m == 6)
+		printf("2");
+	else if (m == 7)
+		printf("3");
+	else if (m == 8)
+		printf("4");
+	else if (m == 9)
+		printf("5");
+
+}
+
+
+

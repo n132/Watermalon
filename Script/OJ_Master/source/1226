@@ -1,0 +1,36 @@
+
+//Problem1226
+
+
+
+
+#include<stdio.h>
+int main()
+{
+	int i;
+	int n, t;
+	while (scanf("%d", &n) != EOF)//条件为输入EOF时结束
+	{
+		for (i = 1; i <= n; i++)
+		{
+			if (i % 7 == 0)//第一种：为7的倍数
+				printf("%d\n", i);
+			else
+			{
+				t = i;
+				while (t != 0)
+				{
+					if (t % 10 == 7)//数字中带7
+					{		printf("%d\n", i); break;
+				}
+					t = t / 10;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+

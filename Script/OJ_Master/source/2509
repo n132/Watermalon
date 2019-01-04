@@ -1,0 +1,76 @@
+
+//Problem2509
+
+
+#include<stdio.h>
+int main()
+{
+	int n, m;
+	int *s, *e;
+	while (scanf("%d%d",&n,&m)==2)
+	{
+		int x, y,xx,yy;
+		int a[50][50];
+		getchar();
+		for (int i = 0; i < n; i++)
+		{
+			for (int k = 0; k < m; k++)
+			{
+				char f;
+				scanf("%c", &f);
+				if (f == '#')
+					a[i][k] = 0;
+				else if (f == '.')
+					a[i][k] = 1;
+				else if (f == 'W')
+				{
+
+					x = i, y = k;
+					a[i][k] = 1;
+				}
+				else
+				{
+					xx = i, yy = k;
+					a[i][k] = 1;
+				}
+			}getchar();
+		}//输入完成
+		int c[] = { 0,-1,1,0 }, t[] = { 1, 0, 0, -1 };
+		int step = 0;
+		int topx=x, topy=y;
+		while (!(xx==x && yy==y))
+		{
+			int tx, toptx=-1;
+			for ( tx = 0; tx < 4; tx++)
+			{   
+				if (x + c[tx] < n&&x+c[tx]>=0 && y + t[tx] < m &&y + t[tx] >=0&& a[x + c[tx]][y + t[tx]] == 1&& (x + c[tx]!=topx||y+t[tx]!=topy)&&toptx!=3-tx)//判断可否走
+				{
+					topx = x;
+					topy = y;
+					x += c[tx];
+					y += t[tx];
+					step++;
+					toptx = tx;
+					break;
+				}
+				
+		    }
+			if (tx == 4)
+			{
+				a[x][y] = 0;
+				x = topx;
+				y = topy;
+				step--;
+			}
+			if (step < 0) {
+				printf("Mission Failed\n"); break; 
+			}
+		}
+		if(step+1)
+		 printf("%d\n", step);
+
+	}
+}
+
+
+

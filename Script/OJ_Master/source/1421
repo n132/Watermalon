@@ -1,0 +1,31 @@
+
+//Problem1421
+
+
+
+
+#include<stdio.h>
+#include<math.h>//1421: 2005年春浙江省计算机等级考试二级C 编程题(1)
+int main()
+{
+	double x,f;
+	scanf("%lf",& x);
+	if (x < 0)
+		f = -x;
+	else if (x >= 0 && x < 2)
+		f = sqrt(x + 1);
+	else if (x >= 2 && x < 4)
+		f = pow((x + 2), 5);
+	else if (x >= 4)
+		f = x * 2 + 5;
+
+	printf("%.2lf", f);
+
+
+
+}
+
+
+
+
+

@@ -1,0 +1,56 @@
+
+//Problem1065
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    long long int k,n, m, t = 0;
+    long long int a[100];
+    while (scanf("%lld  %lld", &n, &m), 1)
+    {
+        if (n == 0 && m == 0)
+            break;
+        if (6 >= n && 6 <= m)
+        {
+            a[t]=6;t++ ;
+        }
+        if (28 >= n && 28 <= m)
+        {
+            a[t] = 28; t++;
+        }
+        if (496 >= n && 496 <= m)
+        {
+            a[t] = 496; t++;
+        }
+        if (8128 >= n && 8128 <= m)
+        {
+            a[t] = 8128; t++;
+        }
+        if (33550336 >= n && 33550336 <= m)
+        {
+            a[t] = 33550336; t++;
+        }
+        k = t;
+        if (t == 0)
+        {
+            printf("No");
+            printf("\n");
+        }
+        else
+        {
+            for (t = 0; t < k-1; t++)
+                printf("%lld ", a[t]);
+                printf("%lld\n", a[k-1]);
+        }t = 0;
+ 
+ 
+    }
+}
+
+
+
+
+

@@ -1,0 +1,42 @@
+
+//Problem1180
+
+
+
+
+ #include<stdio.h>
+int main()
+{
+	int n, m;
+
+	int a, b, c, d, e, f;
+	scanf("%d:%d:%d", &a, &b, &c);
+	scanf("%d:%d:%d", &d, &e, &f);
+	n = a * 3600 + b * 60 + c;
+	m = d * 3600 + e * 60 + f;
+	if (n >= m)
+	{
+		n = n - m;
+		a = n / 3600;
+		
+		c = n % 60;
+		b = (n % 3600 - c) / 60;
+		printf("%d:%02d:%02d", a, b, c);
+
+	}
+	else
+	{
+		m = m - n;
+		a = m / 3600;
+		c = m % 60;
+		b = (m %3600-c)/60;
+		
+		printf("%d:%02d:%02d", a, b, c);
+
+	}
+}
+
+
+
+
+

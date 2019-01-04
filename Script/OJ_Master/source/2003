@@ -1,0 +1,30 @@
+
+//Problem2003
+
+
+#include<string.h>
+#include<stdio.h>
+int main()
+{
+	int i,t=0;
+	char c[10000];
+	char a[10000];
+	gets(c);
+	for (i = 0; i < strlen(c); i++)
+	{
+		if (c[i] == 's'&&c[i - 1] == 'i');
+		else if (c[i] == 's'&&c[i - 1] == 'I');
+		else if (c[i] == 'S'&&c[i - 1] == 'i');
+		else if (c[i] == 'S'&&c[i - 1] == 'I');
+		else if (c[i] == 'i'&&c[i + 1]=='s') ;
+		else if (c[i] == 'i'&&c[i + 1] == 'S');
+		else if (c[i] == 'I'&&c[i + 1] == 's');
+		else if (c[i] == 'I'&&c[i + 1] == 'S');
+		else printf("%c", c[i]);
+		
+	}
+
+}
+
+
+

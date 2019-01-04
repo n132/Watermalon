@@ -1,0 +1,47 @@
+
+//Problem1066
+
+
+
+
+#include<stdio.h>
+int nie(int n)
+{
+	int sum=0;
+	int i;
+	for (i = 1; i < n; i++)
+		if (n%i == 0)
+			sum += i;
+	return sum;
+}
+int zys(int n, int m)
+{
+	if (nie(n) == m&&nie(m) == n)
+
+		return 1;
+	else
+		return 0;
+}
+int main()
+{
+	int t,i;
+	int n[1000], m[1000];
+	scanf("%d", &t);
+	for (i = 0; i < t; i++)
+	{
+		scanf("%d %d", &n[i], &m[i]);
+	}
+	for (i = 0; i < t; i++)
+	{
+		if (zys(n[i], m[i]) == 1)
+			printf("YES\n");
+		else
+			printf("NO\n");
+	}
+	
+}
+
+
+
+
+

@@ -1,0 +1,31 @@
+
+//Problem1172
+
+
+
+
+#include<stdio.h>
+int main()
+{
+	int fb(int n);
+	int i, j;
+	double t=0;
+	scanf("%d", &j);
+	for (i = 1; i <= j; i++)
+	{
+		t += fb(i + 1)*1.0 / fb(i);
+	}
+	printf("%.6lf", t);
+}
+
+int fb(int n)
+{
+	if (n == 1) return 1;
+	else if (n == 2) return 2;
+	else return fb(n - 1) + fb(n - 2);
+}
+
+
+
+
+

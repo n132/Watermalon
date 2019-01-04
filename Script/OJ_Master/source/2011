@@ -1,0 +1,30 @@
+
+//Problem2011
+
+
+#include<string.h>
+#include<stdio.h>
+int main()
+{
+    int k;
+    int b=1;
+    char a[1000];
+    gets(a);
+    for (int i = 0; i < strlen(a); i++)
+    {
+        for ( k = 0; k < i; k++)
+        {
+            if (a[k] == a[i])
+                b = 0;
+        }
+        if (b != 0)
+        {
+            printf("%c", a[i]);
+             
+        }b = 1;
+    }
+}
+
+
+
+

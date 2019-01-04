@@ -1,0 +1,40 @@
+
+//Problem2361
+
+
+#include<stdio.h>
+int nie(int n)
+{
+	int sum = 0;
+	int i;
+	for (i = 1; i < n; i++)
+		if (n%i == 0)
+			sum += i;
+	return sum;
+}
+int zys(int n, int m)
+{
+	if (nie(n) == m&&nie(m) == n)
+
+		return 1;
+	else
+		return 0;
+}
+int main()
+{
+	int t, i;
+	for (i = 6; i <= 5000; i++)
+	{
+		for (t = i+1; t <= 5000; t++)
+		{
+			if (zys(i, t) == 1)
+			{
+				printf("(%d,%d)\n",i,t);
+			}
+		}
+	}
+
+}
+
+
+

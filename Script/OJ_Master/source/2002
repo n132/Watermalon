@@ -1,0 +1,19 @@
+
+//Problem2002
+
+
+#include<string.h>
+#include<stdio.h>
+int main()
+{
+	int i;
+	char n[10000];
+	gets(n);
+	for (i = 0; i < strlen(n); i++)
+	{
+		printf("%c", n[strlen(n)-1-i]);
+	}
+}
+
+
+

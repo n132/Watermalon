@@ -1,0 +1,28 @@
+
+//Problem1514
+
+
+#include<stdio.h>
+int main()
+{
+	int n,k,t=0;
+	int b[100000],a[100000];
+	int i;
+	scanf("%d", &n);
+	for (i = 0; i < n; i++)
+		scanf("%d", &a[i]);
+	scanf("%d", &k);
+	for (i = 0; i < n-k; i++)
+		b[i + k] = a[i];
+	for (i; i < n; i++)
+	{
+		b[t] = a[i];
+		t++;
+	}	
+	for (i = 0; i < n; i++)
+			printf("%d ", b[i]);
+		
+}
+
+
+

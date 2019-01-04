@@ -1,0 +1,28 @@
+
+//Problem2482
+
+
+#include<stdio.h>
+int sv(int a, int b)
+{
+	if (a < 0 || b < 0 || a < b)
+	{
+		return 0;
+	}
+	else if (b == 0) return 1;
+	else
+	{
+		return sv(a - 1, b) + sv(a, b - 1);
+	}
+}
+int main()
+{
+	int a, b;
+	while (scanf("%d,%d",&a,&b)!=EOF)
+	{
+		printf("%d\n", sv(a, b));
+	}
+}
+
+
+

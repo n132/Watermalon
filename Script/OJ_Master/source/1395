@@ -1,0 +1,31 @@
+
+//Problem1395
+
+
+
+
+#include<stdio.h>
+int gcm(int a, int b)
+{
+	return b == 0 ? a : gcm(b, a%b);
+}
+int main()
+{
+	int a, b;
+	while (scanf("%d%d", &a, &b) != EOF)
+	{
+		int tt = gcm(a, b);
+		a /= tt;
+		b /= tt;
+		if (b == 1) printf("%d\n", a);
+		else
+		{
+			printf("%d/%d\n", a, b);
+		}
+	}
+}
+
+
+
+
+

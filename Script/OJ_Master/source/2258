@@ -1,0 +1,33 @@
+
+//Problem2258
+
+
+#include<math.h>
+#include<string>
+#include<stdio.h>
+long long int sanse(int n)
+{
+	
+	if (n == 1) return 3;
+	else
+	{
+		return pow(2, n) + 2*pow(-1, n);
+	}
+}
+int main()
+{
+	long long int  c;
+	long long int a = 6, b = 6;
+	int u;
+	int n,i;
+	scanf("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		scanf("%d", &u);
+		printf("%lld\n", sanse(u));
+	}
+	
+}
+
+
+

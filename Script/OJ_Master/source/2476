@@ -1,0 +1,89 @@
+
+//Problem2476
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char str1[1000], str2[1000];
+	char *p;
+	gets(str1);
+	gets(str2);
+	int n = strlen(str1);
+	int m = strlen(str2);
+	char ex1[1000][100];
+	char ex2[1000][100];
+	for (int i = 0; i < 1000; i++)
+	{
+		for (int k = 0; k < 100; k++)
+		{
+			ex1[i][k] = '\0';
+			ex2[i][k] = '\0';
+		}
+	}
+	int num1 = 0, num2 = 0;
+	int t = 0, g = 0;
+	for (p = str1; p <= str1 + n - 1; p++)
+	{
+		
+		
+		 if(*p!=' '&&*(p-1)==' ')
+		{
+			t++;
+			g = 0;
+			ex1[t][g] = *p;
+			g++;
+		}
+		 else if (*p != ' ')
+		 {
+			 ex1[t][g] = *p;
+			 g++;
+		 }
+	}
+	num1 = t;
+	
+	 t = 0, g = 0;
+	for (p = str2; p != str2 + m - 1; p++)
+	{
+
+		
+		 if (*p != ' '&&*(p - 1) == ' ')
+		{
+			t++;
+			g = 0;
+			ex2[t][g] = *p;
+			g++;
+		}
+		 else if (*p != ' ')
+		 {
+			 ex2[t][g] = *p;
+			 g++;
+		 }
+	}
+	num2 = t;
+	char ans[1000] ;
+	for (int i = 0; i < 1000; i++)
+	{
+		ans[i] = '\0';
+	}
+	int lenth = 0;
+	for (int i = 0; i <= num1; i++)
+	{
+		for (int k = 0; k <= num2; k++)
+		{
+			if (strcmp(ex1[i], ex2[k]) == 0&&strlen(ex1[i])>lenth)
+			{
+				lenth = strlen(ex1[i]);
+				strcpy(ans, ex1[i]);
+				break;
+			}
+		}
+	}
+	printf("%s\n", ans);
+
+
+}
+
+
+

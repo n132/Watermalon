@@ -1,0 +1,37 @@
+
+//Problem2254
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char a[10000];
+	while (gets(a) != NULL)
+	{
+		for (int i = 0; i < strlen(a); i++)
+		{
+			if (a[i] == 'Q' || a[i] == 'Z')
+				printf("1");
+			if (a[i] == 'A' || a[i] == 'B'||a[i]=='C')
+				printf("2");
+			if (a[i] == 'D' || a[i] == 'F' || a[i] == 'E')
+				printf("3");
+			if (a[i] == 'G' || a[i] == 'H' || a[i] == 'I')
+				printf("4");
+			if (a[i] == 'J' || a[i] == 'K' || a[i] == 'L')
+				printf("5");
+			if (a[i] == 'M' || a[i] == 'N' || a[i] == 'O')
+				printf("6");
+			if (a[i] == 'P' || a[i] == 'R' || a[i] == 'S')
+				printf("7");
+			if (a[i] == 'T' || a[i] == 'U' || a[i] == 'V')
+				printf("8");
+			if (a[i] == 'W' || a[i] == 'X' || a[i] == 'Y')
+				printf("9");
+		}printf("\n");
+	}
+}
+
+
+

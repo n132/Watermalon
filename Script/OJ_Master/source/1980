@@ -1,0 +1,25 @@
+
+//Problem1980
+
+
+#include<stdio.h>
+int main()
+{
+	int n,i,k,t=0;
+	float a[6][6];
+	scanf("%d", &n);
+	for (k = 0; k < n; k++)
+	{
+		for (i = 0; i < n; i++)
+			scanf("%f", &a[k][i]);
+	}
+	for (k = 0; k < n; k++)
+		for (i = 0; i < k; i++)
+			if (a[k][i] != 0)
+				t = 1;
+	if (t == 1) printf("NO\n");
+	else printf("YES\n");
+}
+
+
+

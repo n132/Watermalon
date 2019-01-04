@@ -1,0 +1,39 @@
+
+//Problem2546
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char a[1000];
+    char b[1000];
+    while (scanf("%s %s", a, b) || 1)
+    {
+        int sum = 0;
+        if (a[0] == '0'&&b[0] == '0')
+            break;
+        sum = a[strlen(a) - 1] + b[strlen(b) - 1];
+            /*for (int i = 0; i < strlen(a); i++)
+            {
+                if ((a[i] - 'a') % 2 == 0);
+                else sum++;
+            }
+            for (int i = 0; i < strlen(b); i++)
+            {
+                if ((b[i] - 'a') % 2 == 0);
+                else sum++;
+            }*/
+        if (sum % 2 == 0)printf("Yes\n");
+        else printf("No\n");
+        for (int i = 0; i < 1000; i++)
+        {
+            a[i] = 0;
+            b[i] = 0;
+        }
+    }
+ 
+}
+
+
+

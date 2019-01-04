@@ -1,0 +1,26 @@
+
+//Problem1899
+
+
+#include<stdio.h>
+int main(void)
+{
+	int n,i,j;
+	scanf("%d", &n);
+	if (n == 0)
+		printf("exit");
+	else if (n == 1)
+	{
+		for(i=0;i<10;i++)
+			for (j = 0; j <= i; j++)
+			{
+				if (i == j)
+					printf(" %d*%d=%-3d\n", i, j, i*j);
+				else
+					printf(" %d*%d=%-3d", i, j, i*j);
+			}
+	}
+}
+
+
+

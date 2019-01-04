@@ -1,0 +1,55 @@
+
+//Problem2013
+
+
+#include<stdio.h>
+int main()
+{
+	int n;
+	while (scanf("%d",&n)!=EOF)
+	{
+		int a[1000];
+		int len = 1;
+		int top,now;
+		int head,end;
+		int tp = 1;
+		scanf("%d",& now); a[0] = now;
+		top = now;
+		for (int i = 1; i < n; i++)
+		{
+			
+			scanf("%d", &now);
+			a[i] = now;
+			if (now == top)
+			{
+				
+				tp++;
+				if (tp > len)
+				{
+					len = tp; int k;
+					for (k = i; a[k] == now; k--)
+					{
+
+					}
+					head= k + 1;
+					end = i;
+
+				}
+			}
+			else
+			{
+				tp = 1;
+			}
+
+		}
+		if (len == 1)
+			printf(" No equal number list.\n");
+		else
+		{
+			printf("The longest equal number list is from %d to %d.\n",head,end );
+		}
+	}
+}
+
+
+

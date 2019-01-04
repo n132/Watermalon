@@ -1,0 +1,20 @@
+
+//Problem1233
+
+
+
+
+#include<stdio.h>
+int main()
+{
+	int n;
+	while (scanf("%d", &n), n)
+	{
+		printf("%X", n);
+	}
+}
+
+
+
+
+

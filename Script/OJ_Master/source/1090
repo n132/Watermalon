@@ -1,0 +1,47 @@
+
+//Problem1090
+
+
+
+
+ #include <stdio.h>
+    int abs(int n)
+    {
+        if (n < 0) return -n;
+        else return n;
+    }
+    int main()
+    {
+        int n, i,t,mid;
+        int a[10000],b[10000];
+        while (scanf("%d", &n), n)
+        {
+            for (i = 0; i < n; i++)
+            {
+                scanf("%d", &a[i]);
+            }
+     
+            for (i = 0; i < n - 1; i++)
+            {
+                for (t = 0; t < n -i-1; t++)
+                {
+                    if (abs(a[t]) < abs(a[n - i - 1]))
+                    {
+                        mid = a[t];
+                        a[t] = a[n - i - 1];
+                        a[n - i - 1] = mid;
+                    }
+                }
+            }
+            for (i = 0; i < n-1; i++)
+                printf("%d ", a[i]);
+            printf("%d\n", a[n - 1]);
+ 
+        }
+ 
+    }
+
+
+
+
+

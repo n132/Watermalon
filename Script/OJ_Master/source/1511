@@ -1,0 +1,31 @@
+
+//Problem1511
+
+
+#include<stdio.h>
+int main()
+{
+	int i, m, n, a[3];
+	scanf("%d %d %d", &a[0], &a[1], &a[2]);
+	m = -1000000, n = 100000;
+	for (i = 0; i < 3; i++)
+	{
+		if (m < a[i])
+			m = a[i];
+	}
+	for (i = 0; i < 3; i++)
+	{
+		if (n > a[i])
+			n = a[i];
+	}
+	printf("%d ", n);
+	for (i = 0; i < 3; i++)
+	{
+		if (a[i] != m && a[i] != n)
+			printf("%d ", a[i]);
+	}
+	printf("%d ", m);
+}
+
+
+

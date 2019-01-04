@@ -1,0 +1,29 @@
+
+//Problem1930
+
+
+#include<stdio.h>
+int main()
+{
+	int n, m, t, i, l;
+	while (scanf("%d %d", &n, &m) != EOF) {
+		for (i = 1; i < m; i++)
+		{
+			if (m%i == 0 && n%i == 0)
+			{
+				t = i;
+			}
+		}printf("%d ", t);
+		for (i = m; i <= m*n; i++)
+		{
+			if (i%n == 0 && i%m == 0)
+			{
+				printf("%d\n", i);
+				break;
+			}
+		}
+	}
+}
+
+
+

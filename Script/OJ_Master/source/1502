@@ -1,0 +1,19 @@
+
+//Problem1502
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char n[5];
+	int i;
+
+	gets(n);
+	for (i = 0; i < 3; i++)
+		printf("%c ", n[i]);
+	printf("%c", n[3]);
+}
+
+
+

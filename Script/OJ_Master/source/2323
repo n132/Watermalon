@@ -1,0 +1,381 @@
+
+//Problem2323
+
+
+#include<stdio.h>
+int nit(int n)
+{
+    int t=1;
+    while (n / 10 != 0)
+    {
+        n=n / 10;
+        t++;
+    }
+    return t;
+}
+int main()
+{
+    int a[4];
+    int n;
+    while (scanf("%d", &n) != EOF)
+    {
+        int i, t = n;
+        for (i = nit(t)-1; i >=0; i--)
+        {
+            a[i] = t % 10;
+            t /= 10;
+        }
+        if (nit(n) == 1)
+        {
+            if (n == 0)
+                printf("零\n");
+            else if (n == 1)
+                printf("一\n");
+            else if (n == 2)
+                printf("二\n");
+            else if (n == 3)
+                printf("三\n");
+            else if (n == 4)
+                printf("四\n");
+            else if (n == 5)
+                printf("五\n");
+            else if (n == 6)
+                printf("六\n");
+            else if (n == 7)
+                printf("七\n");
+            else if (n == 8)
+                printf("八\n");
+            else if (n == 9)
+                printf("九\n");
+ 
+        }
+        else if (nit(n) == 2)
+        {
+            if (n % 10 == 0)
+            {
+                if (a[0] == 1)
+                    printf("十\n");
+                else if(a[0]==2)
+                    printf("二十\n");
+                else if (a[0] == 3)
+                    printf("三十\n");
+                else if (a[0] == 4)
+                    printf("四十\n");
+                else if (a[0] == 5)
+                    printf("五十\n");
+                else if (a[0] == 6)
+                    printf("六十\n");
+                else if (a[0] == 7)
+                    printf("七十\n");
+                else if (a[0] == 8)
+                    printf("八十\n");
+                else if (a[0] == 9)
+                    printf("九十\n");
+ 
+            }
+            else
+            {
+             
+                if (a[0] == 1)
+                    ;
+                else if (a[0] == 2)
+                    printf("二");
+                else if (a[0] == 3)
+                    printf("三");
+                else if (a[0] == 4)
+                    printf("四");
+                else if (a[0] == 5)
+                    printf("五");
+                else if (a[0] == 6)
+                    printf("六");
+                else if (a[0] == 7)
+                    printf("七");
+                else if (a[0] == 8)
+                    printf("八");
+                else if (a[0] == 9)
+                    printf("九");
+                printf("十");
+                if (a[1] == 1)
+                    printf("一\n");
+                else if (a[1] == 2)
+                    printf("二\n");
+                else if (a[1] == 3)
+                    printf("三\n");
+                else if (a[1] == 4)
+                    printf("四\n");
+                else if (a[1] == 5)
+                    printf("五\n");
+                else if (a[1] == 6)
+                    printf("六\n");
+                else if (a[1] == 7)
+                    printf("七\n");
+                else if (a[1] == 8)
+                    printf("八\n");
+                else if (a[1] == 9)
+                    printf("九\n");
+                 
+ 
+        }
+         
+    }
+        else if (nit(n) == 3)
+        {
+            if (n % 100 == 0)
+            {
+                if (a[0] == 1)
+                    printf("一百\n");
+                else if (a[0] == 2)
+                    printf("二百\n");
+                else if (a[0] == 3)
+                    printf("三百\n");
+                else if (a[0] == 4)
+                    printf("四百\n");
+                else if (a[0] == 5)
+                    printf("五百\n");
+                else if (a[0] == 6)
+                    printf("六百\n");
+                else if (a[0] == 7)
+                    printf("七百\n");
+                else if (a[0] == 8)
+                    printf("八百\n");
+                else if (a[0] == 9)
+                    printf("九百\n");
+ 
+ 
+            }
+            else
+            {
+                if (a[0] == 1)
+                    printf("一");
+                else if (a[0] == 2)
+                    printf("二");
+                else if (a[0] == 3)
+                    printf("三");
+                else if (a[0] == 4)
+                    printf("四");
+                else if (a[0] == 5)
+                    printf("五");
+                else if (a[0] == 6)
+                    printf("六");
+                else if (a[0] == 7)
+                    printf("七");
+                else if (a[0] == 8)
+                    printf("八");
+                else if (a[0] == 9)
+                    printf("九");
+                printf("百");
+                if (a[1] == 0)
+                    printf("零");
+                else
+                {
+                    if (a[1] == 1)
+                        printf("一");
+                    else if (a[1] == 2)
+                        printf("二");
+                    else if (a[1] == 3)
+                        printf("三");
+                    else if (a[1] == 4)
+                        printf("四");
+                    else if (a[1] == 5)
+                        printf("五");
+                    else if (a[1] == 6)
+                        printf("六");
+                    else if (a[1] == 7)
+                        printf("七");
+                    else if (a[1] == 8)
+                        printf("八");
+                    else if (a[1] == 9)
+                        printf("九");
+                    printf("十");
+                }
+                 
+                if (a[2] == 1)
+                    printf("一\n");
+                else if (a[2] == 0)
+                    printf("\n");
+                else if (a[2] == 2)
+                    printf("二\n");
+                else if (a[2] == 3)
+                    printf("三\n");
+                else if (a[2] == 4)
+                    printf("四\n");
+                else if (a[2] == 5)
+                    printf("五\n");
+                else if (a[2] == 6)
+                    printf("六\n");
+                else if (a[2] == 7)
+                    printf("七\n");
+                else if (a[2] == 8)
+                    printf("八\n");
+                else if (a[2] == 9)
+                    printf("九\n");
+            }
+ 
+        }
+        else
+        {
+            if (n % 1000 == 0)
+            {
+                if (a[0] == 1)
+                    printf("一千\n");
+                else if (a[0] == 2)
+                    printf("二千\n");
+                else if (a[0] == 3)
+                    printf("三千\n");
+                else if (a[0] == 4)
+                    printf("四千\n");
+                else if (a[0] == 5)
+                    printf("五千\n");
+                else if (a[0] == 6)
+                    printf("六千\n");
+                else if (a[0] == 7)
+                    printf("七千\n");
+                else if (a[0] == 8)
+                    printf("八千\n");
+                else if (a[0] == 9)
+                    printf("九千\n");
+ 
+ 
+            }
+            else
+            {
+                if (a[0] == 1)
+                    printf("一");
+                else if (a[0] == 2)
+                    printf("二");
+                else if (a[0] == 3)
+                    printf("三");
+                else if (a[0] == 4)
+                    printf("四");
+                else if (a[0] == 5)
+                    printf("五");
+                else if (a[0] == 6)
+                    printf("六");
+                else if (a[0] == 7)
+                    printf("七");
+                else if (a[0] == 8)
+                    printf("八");
+                else if (a[0] == 9)
+                    printf("九");
+                printf("千");
+                 
+                if (a[1] == 1 && a[2] == 0 && a[3] == 0)
+                {
+                    printf("一百\n"); goto end;
+                }
+                    else if (a[1] == 2 && a[2] == 0 && a[3] == 0)
+                    {
+                        printf("二百\n"); goto end;
+                    }
+                    else if (a[1] == 3 && a[2] == 0 && a[3] == 0)
+                    {
+                        printf("三百\n"); goto end;
+                    }
+                    else if (a[1] == 4 && a[2] == 0 && a[3] == 0)
+                    {
+                        printf("四百\n"); goto end;
+                    }
+                    else if (a[1] == 5 && a[2] == 0 && a[3] == 0)
+                    {
+                        printf("五百\n"); goto end;
+                    }
+                    else if (a[1] == 6 && a[2] == 0 && a[3] == 0)
+                    {
+                        printf("六百\n"); goto end;
+                    }
+                    else if (a[1] == 7 && a[2] == 0 && a[3] == 0)
+                    {
+                        printf("七百\n"); goto end;
+                    }
+                    else if (a[1] == 8)
+                    {
+                        printf("八百\n"); goto end;
+                    }
+                    else if (a[1] == 9 && a[2] == 0 && a[3] == 0)
+                    {
+                        printf("九百\n"); goto end;
+                    }
+ 
+ 
+                 
+                if (a[1] == 0&&a[2]!=0)
+                {
+                    printf("零");    goto ma;
+                }
+                    else if (a[1] == 1)
+                        printf("一百");
+                    else if (a[1] == 2)
+                        printf("二百");
+                    else if (a[1] == 3)
+                        printf("三百");
+                    else if (a[1] == 4)
+                        printf("四百");
+                    else if (a[1] == 5)
+                        printf("五百");
+                    else if (a[1] == 6)
+                        printf("六百");
+                    else if (a[1] == 7)
+                        printf("七百");
+                    else if (a[1] == 8)
+                        printf("八百");
+                    else if (a[1] == 9)
+                        printf("九百");
+                    //printf("百");
+                ma: if (a[2] == 0)
+                        printf("零");
+                    else
+                    {
+                        if (a[2] == 1)
+                            printf("一");
+                        else if (a[2] == 2)
+                            printf("二");
+                        else if (a[2] == 3)
+                            printf("三");
+                        else if (a[2] == 4)
+                            printf("四");
+                        else if (a[2] == 5)
+                            printf("五");
+                        else if (a[2] == 6)
+                            printf("六");
+                        else if (a[2] == 7)
+                            printf("七");
+                        else if (a[2] == 8)
+                            printf("八");
+                        else if (a[2] == 9)
+                            printf("九");
+                        printf("十");
+                    }
+ 
+                    if (a[3] == 1)
+                        printf("一\n");
+                    else if (a[3] == 0)
+                        printf("\n");
+                    else if (a[3] == 2)
+                        printf("二\n");
+                    else if (a[3] == 3)
+                        printf("三\n");
+                    else if (a[3] == 4)
+                        printf("四\n");
+                    else if (a[3] == 5)
+                        printf("五\n");
+                    else if (a[3] == 6)
+                        printf("六\n");
+                    else if (a[3] == 7)
+                        printf("七\n");
+                    else if (a[3] == 8)
+                        printf("八\n");
+                    else if (a[3] == 9)
+                        printf("九\n");
+ 
+                }
+             
+ 
+        }end: 1 == 1;
+             
+     
+    }
+    return 1;
+}
+
+
+

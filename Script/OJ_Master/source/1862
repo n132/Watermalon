@@ -1,0 +1,40 @@
+
+//Problem1862
+
+
+#include<stdio.h>
+int jishu(int n)
+{
+	int t = 0;
+	int a[1000];
+	int i=0;
+	
+	while (n / 10 != 0)
+	{
+		a[i] = n % 10;
+		n /= 10;
+		i++;
+	}
+	a[i] = n;
+	for (int k = 0; k <= i; k++)
+	{
+		if (a[k] == 1)
+			t++;
+	}
+	return t;
+}
+int main()
+{
+	int sum = 0;
+	int k;
+	int n;
+	scanf("%d", &n);
+	for (k = 1; k <= n; k++)
+	{
+		sum += jishu(k);
+	}
+	printf("%d", sum);
+}
+
+
+

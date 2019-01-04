@@ -1,0 +1,30 @@
+
+//Problem1704
+
+
+#include<stdio.h>
+#include<math.h>
+
+
+int main()
+{
+	
+	int fb(int n);
+	int a;
+	while (scanf("%d\n", &a), a)
+	{
+		printf("%d\n", fb(a));
+	}
+	
+	
+}
+int fb(int n)
+{
+	if (n == 1) return 1;
+	else if (n == 2) return 2;
+	else if (n == 3) return 4;
+	else return fb(n - 1) + fb(n - 2) + fb(n - 3);
+}
+
+
+

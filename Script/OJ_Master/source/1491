@@ -1,0 +1,32 @@
+
+//Problem1491
+
+
+#include<stdio.h>
+int main()
+{
+	int i,a[10],t,k=-1000000,f,d;
+	for(i=0;i<10;i++)
+	scanf("%d", &a[i]);
+	for (i = 0; i < 9; i++)
+	{
+		for (t = 0; t < (10-i); t++)
+		{
+			if (a[t] > k)
+			{
+				k = a[t];
+				f = t;
+			}
+		
+		}
+		d = a[9 - i];
+		a[9 - i] = a[f];
+		a[f] = d;
+		k = -100000;
+	}
+	for(i=0;i<10;i++)
+	printf("%d\n",a[i]);
+}
+
+
+

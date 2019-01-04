@@ -1,0 +1,13 @@
+
+//Problem1890
+
+
+#include<stdio.h>
+int main()
+{
+printf("1534");
+}
+
+
+
+

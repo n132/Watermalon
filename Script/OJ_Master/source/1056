@@ -1,0 +1,41 @@
+
+//Problem1056
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    float a[7];
+    while (scanf("%f%f%f%f%f%f%f", &a[0], &a[1], &a[2], &a[3], &a[4], &a[5], &a[6]) != EOF)
+    {
+        int k, i;
+        float t;
+        char name[30];
+        gets(name);
+        printf("%s", name+1);
+        for (i = 0; i < 7-1; i++)
+        {
+            for (k = 0; k < 7 - 1 - i; k++)
+            {
+                if (a[k] > a[7-1-i])
+                {
+                     
+                    t = a[k];
+                    a[k] = a[7-1-i];
+                    a[7-1-i] = t;
+                }
+            }
+        }
+        float sum = (a[1] + a[2] + a[3] + a[4] + a[5]) / 5;
+        printf(" %.2f\n", sum);
+ 
+    }
+ 
+}
+
+
+
+
+

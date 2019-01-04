@@ -1,0 +1,28 @@
+
+//Problem1914
+
+
+#include<stdio.h>
+int main()
+{
+	int  n, m;
+	
+	scanf("请输入分数 %d", &n);
+	m = n / 10;
+	if (m < 6)
+		m = 1;
+	if (m == 6)
+		m = 2;
+	if (m == 7)
+		m =3;
+	if (m == 8)
+		m = 4;
+	if (m == 9 || m == 10)
+		m = 5;
+	printf("相对应的五分制 %d\n", m);
+		
+}
+
+
+
+

@@ -1,0 +1,34 @@
+
+//Problem2026
+
+
+#include<stdio.h>
+int fb(int n)
+{
+	if (n == 0) return 0;
+	else if (n == 1 || n == 2) return 1;
+	else return fb(n - 1) + fb(n - 2);
+}
+int main()
+{
+	int n, m;
+	while (scanf("%d%d", &n, &m) != EOF)
+	{
+		if (n > m)
+		{
+			int z;
+			z = n;
+			n = m;
+			m = z;
+		}
+		int sum=0;
+		for (int k = n; k <= m; k++)
+		{
+			sum += fb(k);
+		}
+		printf("%d\n", sum);
+	}
+}
+
+
+

@@ -1,0 +1,16 @@
+
+//Problem1919
+
+
+#include<stdio.h>
+int main()
+{
+	int n = 'a' - 'A';
+	char m;
+	scanf("%c", &m);
+	printf("%c", m + n);
+
+}
+
+
+

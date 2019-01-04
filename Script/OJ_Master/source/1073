@@ -1,0 +1,30 @@
+
+//Problem1073
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int i,k,t=0;
+    int f[1100], g[1100];
+    int n, m;
+    scanf("%d %d", &n, &m);
+    for (i = 0; i < n; i++)
+        scanf("%d", &f[i]);
+    for (i = 0; i < m; i++)
+        scanf("%d", &g[i]);
+    for(i=0;i<n;i++)
+        for (k = 0; k < m; k++)
+        {
+            if (f[i] > g[k])
+                t++;
+        }
+    printf("%d", t);
+}
+
+
+
+
+

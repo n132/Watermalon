@@ -1,0 +1,61 @@
+
+//Problem1472
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	int i,n, a[5];
+	scanf("%d", &n);
+	a[0] = n / 10000;
+	a[1] = n /1000-a[0]*10;
+	a[2] = n/100-n/1000*10;
+	a[3]= n /10-n/100*10;
+	 a[4]= n - n/ 10*10;
+	
+	 if (a[0] != 0)
+	 {
+		 printf("5\n");
+		 for (i = 0; i < 4; i++)
+			 printf("%d ", a[i]);
+		 printf("%d\n", a[4]);
+		 for (i = 4; i >= 0; i--)
+			 printf("%d", a[i]);
+	 }
+	 else if (a[0] == 0 && a[1] != 0)
+	 {
+		 printf("4\n");
+		 for (i = 1; i <4; i++)
+			 printf("%d ", a[i]);
+		 printf("%d\n", a[4]);
+		 for (i = 4; i >= 1; i--)
+			 printf("%d", a[i]);
+	 }
+	 else if (a[0] == 0 && a[1] == 0&&a[2]!=0)
+	 {
+		 printf("3\n");
+		 for (i = 2; i < 4; i++)
+			 printf("%d ", a[i]);
+		 printf("%d\n", a[4]);
+		 for (i = 4; i >= 2; i--)
+			 printf("%d", a[i]);
+	 }
+	 else if (a[0] == 0 && a[1] == 0 && a[2] == 0 && a[3] != 0)
+	 {
+		 printf("2\n");
+		 printf("%d %d\n", n / 10, n % 10);
+		 printf("%d%d", n % 10, n / 10);
+	 }
+	 else if (a[0] == 0 && a[3] == 0 && a[2] == 0 && a[1] == 0 && a[4] != 0)
+	 {
+		 printf("1\n");
+		 printf("%d\n",n);
+		 printf("%d\n", n);
+	 }
+
+
+}
+
+
+

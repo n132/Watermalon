@@ -1,0 +1,41 @@
+
+//Problem1736
+
+
+#include<stdio.h>
+struct x
+{
+	char name[100];
+	double a;
+	double b;
+	double c;
+}a[1000];
+int main()
+{
+	int n;
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++)
+	{
+		scanf("%s%lf%lf%lf", a[i].name, &a[i].a, &a[i].b, &a[i].c);
+	}
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i].a + a[i].b + a[i].c >= 180)
+			printf("%s -- pass exam\n", a[i].name);
+	}
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i].a + a[i].b + a[i].c < 180)
+			printf("%s -- not pass exam\n", a[i].name);
+	}
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i].a == 100 && a[i].b == 100 && a[i].c == 100)
+		{
+			printf("%s -- 3 x 100.0\n", a[i].name);
+		}
+	}
+}
+
+
+

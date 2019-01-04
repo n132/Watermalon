@@ -1,0 +1,17 @@
+
+//Problem1904
+
+
+#include <stdio.h>
+int main()
+{
+	int n;
+	char m;
+	scanf("%d", &n);
+	m = n;
+	putchar(m);
+
+}
+
+
+

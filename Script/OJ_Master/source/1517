@@ -1,0 +1,54 @@
+
+//Problem1517
+
+
+#include<stdio.h>
+int main()
+{
+	int year, m, d, ans;
+	scanf("%d %d %d", &year, &m, &d);
+	if (year % 100 != 0 && year % 4 == 0 || year % 400 == 0)
+	{
+		switch (m)
+		{
+		case 1:ans = d; break;
+		case 2:ans = 31 + d; break;
+		case 3:ans = 31 + 29 + d; break;
+		case 4:ans = 31 + 29 + 31 + d; break;
+		case 5:ans = 31 + 29 + 31 + 30 + d; break;
+		case 6:ans = 31 + 29 + 31 + 30 + 31 + d; break;
+		case 7:ans = 31 + 29 + 31 + 30 + 31 + 30 + d; break;
+		case 8:ans = 31 + 29 + 31 + 30 + 31 + 30 + 31 + d; break;
+		case 9:ans = 31 + 29 + 31 + 30 + 31 + 30 + 31 + 31 + d; break;
+		case 10:ans = 31 + 29 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + d; break;
+		case 11:ans = 31 + 29 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + d; break;
+		case 12:ans = 31 + 29 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + d; break;
+
+
+		}
+	}
+	else
+	{
+		switch (m)
+		{
+		case 1:ans = d; break;
+		case 2:ans = 31 + d; break;
+		case 3:ans = 31 + 28 + d; break;
+		case 4:ans = 31 + 28 + 31 + d; break;
+		case 5:ans = 31 + 28 + 31 + 30 + d; break;
+		case 6:ans = 31 + 28 + 31 + 30 + 31 + d; break;
+		case 7:ans = 31 + 28 + 31 + 30 + 31 + 30 + d; break;
+		case 8:ans = 31 + 28 + 31 + 30 + 31 + 30 + 31 + d; break;
+		case 9:ans = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + d; break;
+		case 10:ans = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + d; break;
+		case 11:ans = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + d; break;
+		case 12:ans = 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + d; break;
+		}
+
+
+	}
+	printf("%d", ans);
+}
+
+
+

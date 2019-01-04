@@ -1,0 +1,28 @@
+
+//Problem2197
+
+
+#include<stdio.h>
+int main()
+{
+	int n, m;
+	while (scanf("%d%d",&n,&m) != EOF)
+	{
+		int t;
+		int flag = 0;
+		for (int i = 0; i < m; i++)
+		{
+			scanf("%d", &t);
+			if (t == n)
+			{
+				flag = 1; 
+			}
+		}
+		if (flag == 1)printf("YES\n");
+		else
+			printf("NO\n");
+	}
+}
+
+
+

@@ -1,0 +1,54 @@
+
+//Problem1230
+
+
+
+
+#include<stdio.h>
+int ch(int n)
+{
+	int i,t=0;
+	for (i = 1; i <= n; i++)
+		if (n%i == 0)
+			t++;
+	return t;
+}
+int main()
+{
+	int max = -1,lal=9;
+	int b[10000],a[10000];
+	int n,i;
+	while (scanf("%d", &n) != EOF) 
+	{
+		for (i = 0; i < n; i++)
+		{
+			scanf("%d", &a[i]);
+			b[i] = ch(a[i]);
+		}
+		for (i = 0; i < n; i++)
+		{
+			if (b[i] > max)
+			{
+				max = b[i];
+				lal = a[i];
+				
+			}
+			else if (b[i] == max)
+			{
+				if (a[i] < lal)
+				{
+
+					lal = a[i];
+				}
+			}
+		}
+		printf("%d\n", lal);
+		max = -1, lal = 9;
+	}
+
+}
+
+
+
+
+

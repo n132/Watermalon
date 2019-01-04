@@ -1,0 +1,21 @@
+
+//Problem1492
+
+
+#include<stdio.h>
+int main()
+{
+	int i, n[9], a, b;
+	
+		scanf("%d %d %d\n%d %d %d\n%d %d %d",&n[0],&n[1],&n[2],&n[3],&n[4],&n[5],&n[6],&n[7],&n[8] );
+	a = n[0] + n[4] + n[8];
+	b = n[2] + n[4] + n[6];
+	printf("%d %d", a, b);
+
+
+
+	
+}
+
+
+

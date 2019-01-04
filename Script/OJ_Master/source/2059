@@ -1,0 +1,41 @@
+
+//Problem2059
+
+
+#include<stdio.h>
+int main()
+{
+	int max=-999999;
+	int a[100];
+	int i, t = 0;
+	int n,sum=1;
+	while (scanf("%d", &n) != EOF)
+	{
+		for (i = 0; i < n; i++)
+		{
+			scanf("%d", &a[i]);
+		}
+		for (i = 0; i < n; i++)
+		{
+			if (a[i] < 0)
+			{
+				t++;
+				if (a[i] > max)
+					max = a[i];
+			}
+			if (a[i] == 0)
+				a[i] = 1;
+		}
+		for (i = 0; i < n; i++)
+		{
+				sum *= a[i];
+		}if (sum < 0) sum /= max;
+		printf("%d\n", sum);
+		sum = 1;
+		max=-999999;
+	}
+}
+
+
+
+

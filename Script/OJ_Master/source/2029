@@ -1,0 +1,19 @@
+
+//Problem2029
+
+
+#include <stdio.h>
+int main()
+{
+	int n, m;
+	int sum;
+	scanf("%d %d", &n, &m);
+
+	sum = (n + m)*(m - n + 1) / 2;
+
+
+	printf("The sum from %d to %d is %d.",n,m,sum);
+}
+
+
+

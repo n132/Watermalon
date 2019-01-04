@@ -1,0 +1,17 @@
+
+//Problem1877
+
+
+#include<math.h>
+#include<stdio.h>
+int main()
+{
+	int n;
+	while (scanf("%d",&n)!=EOF)
+	{
+		printf("%.0lf\n", pow(2, n) - 1);
+	}
+}
+
+
+

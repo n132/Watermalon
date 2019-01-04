@@ -1,0 +1,32 @@
+
+//Problem1397
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char v,mx[100];
+	int i[100],t,x,len;
+	gets (mx);
+    len=strlen(mx);
+	for(t=0;t<len;t++)
+	{
+	
+		if(mx[t]>='A'&&mx[t]<='Z')
+			mx[t]=mx[t]+32;
+		else if (mx[t]>='a'&&mx[t]<='z')
+			mx[t]=mx[t]-32;
+	}
+	for (t=0;t<len;t++)
+	{
+		printf("%c",mx[t]);
+	}
+}
+
+
+
+
+

@@ -1,0 +1,47 @@
+
+//Problem2186
+
+
+#include<stdio.h>
+#include<string.h>
+int top=0;
+void push(char stack[],char a)
+{
+	stack[top]=a;
+	top++;
+}
+void pop(char stack[])
+{
+top--;
+}
+int main()
+{
+	char stack[100];
+	int n,i,m,k;
+	char a[100];
+	scanf("%d",&n);
+	{
+		for(i=0;i<n;i++)
+		{
+			scanf("%s",a);
+			m=strlen(a);
+			for(k=0;k<m;k++)
+			{
+			if(a[k]=='(')
+			push(stack,a[k]);
+			else {
+			if(top!=0)
+			pop(stack);
+			else break;
+			}
+			}
+			if(k==m&&top==0)printf("yes\n");
+			else printf("no\n");
+
+		}	
+	}
+}
+
+
+
+

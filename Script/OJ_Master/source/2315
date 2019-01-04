@@ -1,0 +1,43 @@
+
+//Problem2315
+
+
+#include<stdio.h>
+int main()
+{
+	int a[2][3], b[3][2], c[2][2] = { 0 };
+	int i, j, u;
+	for (i = 0; i < 2; i++)
+	{
+		for (j = 0; j < 3; j++)
+		{
+			scanf("%d", &a[i][j]);
+		}
+	}
+	for (i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 2; j++) 
+		{
+			scanf("%d", &b[i][j]);
+		}
+	}
+	for (i = 0; i < 2; i++)
+		for (j = 0; j < 2; j++)
+			for (u = 0; u < 3; u++)
+			{
+				c[i][j]+= a[i][u] * b[u][j];
+			}
+	for (i = 0; i < 2; i++)
+		for (j = 0; j < 2; j++)
+		{
+			printf("%d", c[i][j]);
+			if (j == 0)
+				printf(" ");
+			if (j == 1)
+				printf("\n");
+		}
+}
+
+
+
+

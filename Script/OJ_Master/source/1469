@@ -1,0 +1,19 @@
+
+//Problem1469
+
+
+#include<stdio.h>//1469: C语言程序设计教程（第三版）课后习题5.4
+int main()
+{
+	int a, b, c;
+
+	scanf("%d %d %d", &a, &b, &c);
+	if (a > b)
+		b = a;
+	if (b > c)
+		c = b;
+	printf("%d", c);
+}
+
+
+

@@ -1,0 +1,17 @@
+
+//Problem1994
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	int i;
+	char a[20];
+	gets(a);
+	for (i = strlen(a)-1; i >-1 ; i--)
+		printf("%c", a[i]);
+}
+
+
+

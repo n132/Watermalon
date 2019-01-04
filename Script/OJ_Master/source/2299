@@ -1,0 +1,67 @@
+
+//Problem2299
+
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    while (scanf("%d", &n) != EOF) 
+    {
+         
+        for (int y = 0; y < n; y++)
+        {
+            struct xx
+            {
+                long long int xh;
+                int sc;
+            }stu[1001];
+            int jj;
+            scanf("%d", &jj);
+            int t = 0;
+            while (scanf("%lld%d", &stu[t].xh, &stu[t].sc) || 1)
+            {
+                if (stu[t].sc == 0 && stu[t].xh == 0)
+                {
+                    break;
+                }
+                t++;
+ 
+            }
+            for (int pp = 0; pp < t - 1; pp++)
+            {
+                for (int gg = 0; gg < t - 1 - pp; gg++)
+                {
+                    if (stu[gg].sc < stu[t - 1 - pp].sc)
+                    {
+                        stu[1000] = stu[gg];
+                        stu[gg] = stu[t - 1 - pp];
+                        stu[t - 1 - pp] = stu[1000];
+                    }
+                }
+            }
+ 
+ 
+            for (int pp = 0; pp < t; pp++)
+            {
+                if (stu[pp].xh == jj)
+                {
+                    int fox;
+                    fox = pp;
+                    int uu;
+                    for (uu = fox - 1; uu >= 0; uu--)
+                    {
+                        int m = stu[uu].sc, v = stu[fox].sc;
+                        if (stu[uu].sc == stu[fox].sc)
+                            fox = uu;
+ 
+                    }
+                    printf("%d\n", fox + 1);
+                }
+            }
+        }
+    }
+}
+
+
+

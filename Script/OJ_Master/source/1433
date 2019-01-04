@@ -1,0 +1,30 @@
+
+//Problem1433
+
+
+#include<stdio.h>
+double x(double  n);
+int main()
+{
+	int i,n;
+	double ans=0;
+	scanf("%d", &n);
+	for (i = 1; i <= n; i++)
+	{
+		ans = ans + 1 / x(i);
+	
+	}
+	printf("%.4lf", ans);
+
+}
+double x(double n)
+{
+	int i;
+	double s = 1;
+	for (i = 1; i <= n; i++)
+		s = s * i;
+	return s;
+}
+
+
+

@@ -1,0 +1,38 @@
+
+//Problem1998
+
+
+#include<stdio.h>
+int main()
+{
+	int i,k=0;
+	//int *p;
+	int n;
+	int sum = 0;
+	int a[1001] = {0};
+	scanf("%d", &n);
+
+	while (sum != n - 1)
+	{
+		for (i = 0; i < n; i++)
+		{
+			if (a[i] == 0)
+				k++;
+			if (k == 4)
+			{
+				a[i] = 1;
+				k = 0;
+				sum++;
+			}
+
+		}
+	}
+	for (i = 0; i < n; i++)
+	{
+		if (a[i] == 0)
+			printf("%d", i + 1);
+	}
+}
+
+
+

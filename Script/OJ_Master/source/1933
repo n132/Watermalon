@@ -1,0 +1,22 @@
+
+//Problem1933
+
+
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int i,a, n,m=0;
+	scanf("%d %d", &a, &n);
+	for(i=0;i<n;i++)
+	{
+		m = m + (n - i)*a * pow(10, i);
+
+	}
+	printf("%d", m);
+
+
+}
+
+
+

@@ -1,0 +1,38 @@
+
+//Problem2475
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	int n;
+	char name[10][100];
+	scanf("%d", &n);
+	getchar();
+	for (int i = 0; i < n; i++)
+	{
+		gets(name[i]);
+		
+	}
+	for (int i = 0; i < n; i++)
+	{
+		for (int k = 0; k < n - 1 - i; k++)
+		{
+			if (strcmp(name[k], name[n - 1 - i]) > 0)
+			{
+				char xx[100];
+				strcpy(xx, name[k]);
+				strcpy(name[k], name[n-1-i]);
+				strcpy(name[n - 1 - i], xx);
+			}
+		}
+	}
+	for (int i = 0; i < n; i++)
+	{
+		printf("%s\n", name[i]);
+	}
+}
+
+
+

@@ -1,0 +1,24 @@
+
+//Problem2471
+
+
+#include<stdio.h>
+int fb(int n);
+int main()
+
+{
+	int n;
+	while(scanf("%d", &n)!=EOF)
+	printf("%d\n", fb(n));
+}
+int fb(int n)
+{
+	int i, a[35];
+	a[1] = 1, a[2] = 2;
+	for (i = 3; i < 35; i++)
+		a[i] = a[i - 1] + a[i - 2];
+	return a[n];
+}
+
+
+

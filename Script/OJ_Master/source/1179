@@ -1,0 +1,34 @@
+
+//Problem1179
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	int i,t=0;
+	char c[10000],b[10000];
+	char n;
+	gets(c);
+	scanf("%c",&n);
+	for (i = 0; i < strlen(c); i++)
+	{
+		if(c[i]!=n)
+		{ 
+			b[t] = c[i];
+			t++;
+		}
+			
+	}
+	for(i=0;i<t;i++)
+	printf("%c", b[i]);
+	printf("\n");
+
+}
+
+
+
+
+

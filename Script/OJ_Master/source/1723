@@ -1,0 +1,48 @@
+
+//Problem1723
+
+
+#include<stdio.h>
+#include<malloc.h>
+#include<stdlib.h>
+struct t
+{
+	int n;
+	struct t *next;
+}*head,*tail,*p;
+int main()
+{
+	if ((p = (struct t *)(malloc(sizeof(struct t)))) == NULL)
+	{
+		printf("0");
+		exit(1);
+	}
+	tail = head = p;
+	int n;
+	scanf("%d", &n);
+	int k = 0;
+	while (k<n)
+	{
+		scanf("%d", &p->n);
+		k++;
+		p = (struct t *)malloc(sizeof(struct t));
+		tail->next = p;
+		tail = p;
+	}
+	int min = 999999;
+	tail = head;
+	while (head!=p)
+	{
+		
+		if (head->n < min)
+			min = head->n;
+		head = tail->next;
+		free(tail);
+		tail = head;
+	}
+	printf("%d\n", min);
+
+}
+
+
+

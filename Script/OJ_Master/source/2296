@@ -1,0 +1,48 @@
+
+//Problem2296
+
+
+#include<stdio.h>
+int main()
+{
+	
+	
+	int n;
+	while (scanf("%d", &n) != EOF)
+	{
+		int *p, *o; 
+		int a[10000]; 
+		int i, k, t;
+		for (i = 0; i < n; i++)
+			scanf("%d", &a[i]);
+		for (i = 0; i < n - 1; i++)
+		{
+			for (k = 0; k < n - i - 1; k++)
+			{
+				if (a[k] > a[n - 1 - i])
+				{
+					t = a[k];
+					a[k] = a[n - 1 - i];
+					a[n - i - 1] = t;
+				}
+			}
+		}
+		for (p = a, o = a + n - 1; p < o; p++, o--)
+		{
+
+
+			if (p == o - 1)
+				printf("%d %d\n",*o,*p);
+			else
+			{
+				printf("%d ", *o);
+				printf("%d ", *p);
+			}
+		}
+		if (o == p) printf("%d\n", *p);
+		else;
+	}
+}
+
+
+

@@ -1,0 +1,29 @@
+
+//Problem2333
+
+
+#include<stdio.h>
+int main()
+{
+    int m, n, b, d;
+    char a;
+    while (scanf("%d %d %c %d", &m, &n, &a, &b) != EOF) 
+    {
+        switch (a) 
+        {
+        case '+':d = m + n; break;
+        case '-':d = m - n; break;
+        case '*':d = m * n; break;
+        case '/':d = m / n; break;
+        }
+        if (b == d) {
+            printf("Yes\n");
+        }
+        else if (b != d) {
+            printf("No\n");
+        }
+    }
+}
+
+
+

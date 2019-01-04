@@ -1,0 +1,30 @@
+
+//Problem2217
+
+
+#include<string.h>
+#include<stdio.h>
+int main()
+{
+	int n[26] = { 0 };
+	int i;
+	char a[10000];
+	while (gets(a) != NULL)
+	{
+		for (i = 0; i < strlen(a); i++)
+		{
+			if(a[i]-'a'>=0&&a[i]-'a'<=26)
+			n[a[i] - 'a']++;
+		
+		}
+		for (i = 0; i < 26; i++)
+			printf("%c:%d\n", i + 'a', n[i]);
+		printf("\n");
+		for (i = 0; i < 26; i++)
+			n[i] = 0;
+	}
+
+}
+
+
+

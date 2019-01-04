@@ -1,0 +1,54 @@
+
+//Problem2191
+
+
+#include<stdio.h>
+#include<string.h>
+#define Max 1000
+int main()
+{
+	struct
+	{
+		char n[Max];
+		int m;
+	}st[Max];
+	int i = 0;
+	while (scanf("%s",st[i].n)!=EOF)
+	{
+		if (st[i].n[0] == '#')break;
+		scanf("%d", &st[i].m);
+		i++;
+	}
+	for (int k = 0; k < i-1; k++)
+	{
+		for (int z = 0; z < i - 1 - k; z++)
+		{
+			if (st[z].m > st[i - 1 - k].m)
+			{
+				st[Max-1] = st[z];
+				st[z] = st[i - 1 - k];
+				st[i - 1 - k] = st[Max-1];
+			}
+		}
+	}
+	for (int k = 0; k < i-1; k++)
+	{
+		if (st[k].m == st[k + 1].m)
+		{
+			if (strcmp(st[k].n, st[k + 1].n)>0)
+			{
+				st[Max - 1] = st[k];
+				st[k] = st[k+1];
+				st[k+1] = st[Max - 1];
+			}
+		}
+	}
+	for (int k = 0; k < i; k++)
+	{
+		printf("%s %d\n", st[k].n, st[k].m);
+	}
+
+}
+
+
+

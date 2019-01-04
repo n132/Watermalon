@@ -1,0 +1,12 @@
+
+//Problem1951
+
+
+#include<stdio.h>
+int main()
+{
+	printf("0.097656,299.902344");
+}
+
+
+

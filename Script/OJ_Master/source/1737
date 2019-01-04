@@ -1,0 +1,77 @@
+
+//Problem1737
+
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<malloc.h>
+struct x
+{
+	int n;
+	struct x *next;
+}*head,*tail,*p;
+int main()
+{
+	int n;
+	scanf("%d", &n);
+	p = (struct x*)(malloc((sizeof(struct x*))));
+	head = tail = p;
+	int i = 0;
+	while (i<n)
+	{
+		p = (struct x*)(malloc((sizeof(struct x*))));
+		tail ->next= p;
+		tail = p;
+		scanf("%d", &tail->n);
+		i++;
+	}
+	tail->next = NULL;
+	
+
+	while (i!=0)
+	{
+		i--;
+		p = head;
+		head->n = 999999;
+		while (p->next!=NULL)
+		{
+			if (p->n < head->n)
+			{
+				head->n = p->n;
+			}
+			p = p->next;
+		}
+		if (p->n < head->n)
+		{
+			head->n = p->n;
+		}
+		printf("%d ", head->n);
+		p = head->next;
+		while (p->next != NULL)
+		{
+			if (p->n==head->n)
+			{
+				p->n = 999999;
+			}
+			p = p->next;
+		}
+		if (p->n == head->n)
+		{
+			p->n = 999999;
+		}
+
+	}
+	p = head;
+	while (p->next!=NULL)
+	{
+		p = p->next;
+		free(head);
+		head = p;
+	}
+	free(p);
+
+
+}
+
+
+

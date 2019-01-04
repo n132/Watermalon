@@ -1,0 +1,62 @@
+
+//Problem1829
+
+
+#include<stdio.h>
+int main()
+{
+	int h;
+	int v;
+	int a[10000], b[10000];
+	int t, i, k = 0, l = 0;
+	int n[10000];
+	scanf("%d",&t);
+	for (i = 0; i < t; i++)
+		scanf("%d", &n[i]);
+	for (i = 0; i < t; i++)
+	{
+		if (n[i] % 2 == 0)
+		{
+			a[k] = n[i];
+			k++;
+		}
+		else
+		{
+			b[l] = n[i];
+			l++;
+		}
+	}
+	for (i = 0; i < k - 1; i++)
+	{
+		for ( h = 0; h < k - 1- i; h++)
+		{
+			if (a[h] > a[k - 1 - i])
+			{
+				v = a[h];
+				a[h] = a[k - 1 - i];
+				a[k - 1 - i] = v;
+			}
+		}
+	}
+	for (i = 0; i < l - 1; i++)
+	{
+		for (int h = 0; h < l - 1 - i; h++)
+		{
+			if (b[h] > b[l - 1 - i])
+			{
+				v = b[h];
+				b[h] = b[l - 1 - i];
+				b[l - 1 - i] = v;
+			}
+		}
+	}
+	for (i = 0; i < k; i++)
+		printf("%d ", a[i]);
+	for (i = 0; i < l-1; i++)
+		printf("%d ", b[i]);
+	printf("%d\n", b[i]);
+
+}
+
+
+

@@ -1,0 +1,42 @@
+
+//Problem1925
+
+
+#include<stdio.h>//得出输入了什么东西
+int main()
+{
+	int i;
+	int a=0, b=0, c=0, d=0;
+	char n[20];
+	for (i = 0; i < 20; i++)
+		n[i] = getchar();
+	for (i=0;i<20;i++)
+	{
+		if (n[i] >= 'a'&&n[i] <= 'z')
+			a = a + 1;
+		else if (n[i] >= 'A'&&n[i] <= 'Z')
+			a = a + 1;
+		else if (n[i] >= '1'&&n[i] <= '9')
+			b = b + 1;
+		else if (n[i] == 32)
+			c = c + 1;
+		else if (n[i] == 13)
+			c = c + 1;
+		else if (n[i] == 10)
+			c = c + 1;
+		else
+			d = d + 1;
+
+
+	}
+	printf("%d个英文字母\n",a);
+	printf("%d个数字字符\n",b); 
+	printf("%d个空格或回车\n",c);
+	printf("%d个其他字符\n",d);
+
+
+
+}
+
+
+

@@ -1,0 +1,25 @@
+
+//Problem1878
+
+
+#include<stdio.h>
+int ackermann(int a, int b)
+{
+	if (a == 0) return b + 1;
+	else
+	{
+		if (b == 0) return ackermann(a - 1, 1);
+		else return ackermann(a - 1, ackermann(a, b - 1));
+	}
+}
+int main()
+{
+	int a, b;
+	while (scanf("%d%d",&a,&b)!=EOF)
+	{
+		printf("%d\n", ackermann(a, b));
+	}
+}
+
+
+

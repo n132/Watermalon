@@ -1,0 +1,27 @@
+
+//Problem1175
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int sum=0;
+    int n, i, k;
+    int a[10][10];
+    scanf("%d", &n);
+    for (i = 0; i < n; i++)
+        for (k = 0; k < n; k++)
+            scanf("%d", &a[i][k]);
+    for (i = 0; i < n; i++)
+        for (k = 0; k < i + 1; k++)
+            sum += a[i][k];
+    printf("%d\n", sum);
+ 
+}
+
+
+
+
+

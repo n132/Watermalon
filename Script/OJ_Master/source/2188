@@ -1,0 +1,19 @@
+
+//Problem2188
+
+
+#include<stdio.h>
+int main()
+{
+	int i, t;
+	int a[1000];
+	scanf("%d", &t);
+	for (i = 0; i < t; i++)
+		scanf("%d", &a[i]);
+	for(i=0;i<t;i++)
+	printf("%c", a[i]);
+	
+}
+
+
+

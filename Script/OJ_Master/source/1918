@@ -1,0 +1,26 @@
+
+//Problem1918
+
+
+#include<stdio.h>
+int main()
+{
+	int i,b[4];
+	char n,a[5];
+	gets(a);
+	for (i = 0; i < 4; i++)
+	{
+		b[i] = (a[i]-'0' + 9) % 10;
+	}
+	n = b[0];
+	b[0] = b[2];
+	b[2] = n;
+	n = b[1];
+	b[1] = b[3];
+	b[3] = n;
+	for (i = 0; i < 4; i++)
+		printf("%d", b[i]);
+}
+
+
+

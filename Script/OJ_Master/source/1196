@@ -1,0 +1,50 @@
+
+//Problem1196
+
+
+
+
+#include<stdio.h>
+struct
+{
+	int a;
+	int b;
+	int c;
+	char n[9];
+	int sum;
+}st[10];
+int main()
+{
+	int n;
+	while (scanf("%d", &n) != EOF&&n != -1)
+	{
+		int sum = 0;
+		for (int i = 0; i < n; i++)
+		{
+			scanf("%d%d%d%s", &st[i].a, &st[i].b, &st[i].c, st[i].n);
+			st[i].sum = st[i].a*st[i].b*st[i].c;
+			sum += st[i].sum;
+		}
+		int eve = sum / n;
+		for (int i = 0; i < n; i++)
+		{
+			if (st[i].sum > eve)
+			{
+				printf("%s took clay from ", st[i].n);
+			}
+		}
+		for (int i = 0; i < n; i++)
+		{
+			if (st[i].sum < eve)
+			{
+				printf("%s.\n", st[i].n);
+			}
+		}
+
+	}
+}
+
+
+
+
+

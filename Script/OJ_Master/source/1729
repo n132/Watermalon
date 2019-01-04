@@ -1,0 +1,38 @@
+
+//Problem1729
+
+
+#include<string.h>
+#include<stdio.h>
+int main()
+{
+	int n,t=0;
+	scanf("%d", &n);
+	char a[100][100] = {0};
+	char samp[100];
+	for (int i = 0; i < n; i++)
+	{
+		int k;
+		scanf("%s", samp);
+		samp[strlen(samp)] = 0;
+		for (k = 0; k < t; k++)
+		{
+			if (strcmp(a[k], samp) == 0)
+			{
+				break;
+			}
+		}
+		if (k == t)
+		{
+			strcpy(a[t], samp);
+			t++;
+		}
+	}
+	for (int i = 0; i< t; i++)
+	{
+		printf("%s ",a[i]);
+	}
+}
+
+
+

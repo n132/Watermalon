@@ -1,0 +1,35 @@
+
+//Problem1837
+
+
+#include<stdio.h>
+int main()
+{
+	int n, p, m;
+	int out = 0;
+	scanf("%d%d%d", &n, &p, &m);
+	int a[1001] = { 0 };
+	int ct = 0;
+	for (int i = p; out != n - 1;i++)
+	{
+		if (i == n+1)
+			i = 1;
+		if (a[i] == 0)
+			ct++;
+		if (ct == m)
+		{
+			a[i] = 1;
+			ct = 0;
+			out++;
+		}
+		
+
+	}
+	for (int i = 1; i <= n; i++)
+		if (a[i] == 0)
+			printf("%d\n", i);
+
+}
+
+
+

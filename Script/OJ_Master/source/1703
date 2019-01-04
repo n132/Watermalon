@@ -1,0 +1,47 @@
+
+//Problem1703
+
+
+#include<stdio.h>
+#include<math.h>
+double dis(double a, double b, double c, double d, double e, double f)
+{
+	return sqrt(pow((d - a), 2) + pow((e - b), 2) + pow((f - c), 2));
+}
+int main()
+{
+	int n;
+	while (scanf("%d",&n)!=EOF)
+	{
+		struct 
+		{
+			double x;
+			double y;
+			double z;
+
+		}s[5001];
+		for (int i = 0; i < n + 2; i++)
+		{
+			scanf("%lf%lf%lf", &s[i].x, &s[i].y, &s[i].z);
+		}
+		s[5000].x = (s[n + 1].x + s[n].x) / 2;
+		s[5000].y = (s[n + 1].y + s[n].y) / 2;
+		s[5000].z = (s[n + 1].z + s[n].z) / 2;
+		double min = 999999999999999;
+		int flag = -1;
+		for (int i = 0; i < n; i++)
+		{
+			if(dis(s[i].x,s[i].y,s[i].z,s[5000].x, s[5000].y, s[5000].z)<min)
+			{
+				min = dis(s[i].x, s[i].y, s[i].z, s[5000].x, s[5000].y, s[5000].z);
+				flag = i;
+			}
+		}
+		printf("%.3lf %.3lf %.3lf\n", s[flag].x, s[flag].y, s[flag].z);
+		
+
+	}
+}
+
+
+

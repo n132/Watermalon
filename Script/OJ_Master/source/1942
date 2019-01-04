@@ -1,0 +1,67 @@
+
+//Problem1942
+
+
+#include<stdio.h>
+int main()
+{
+	char a[10000]; int i = 0;
+	while (scanf("%c",& a[i])!=EOF)
+	{
+	B:
+		if (a[i] == 'Y')break;
+		if (a[i] == 'M')
+		{
+			printf("Monday\n");
+		}
+		else if (a[i] == 'T')
+		{
+			char f;
+			f = getchar();
+			if (f == 'T' || f == 'M' || f == 'W' || f == 'F' || f == 'S') { i++; a[i] = f; printf("Wrong data\n"); goto B; }
+			if (f == 'u')
+			{
+				printf("Tuesday\n");
+			}
+			else if(f=='h')
+			{
+				printf("Thursday\n");
+			}
+			else
+			{
+				printf("Wrong data\n"); i++; a[i] = f; goto B;
+			}
+		}
+		else if (a[i] == 'W')
+		{
+			printf("Wednesday\n");
+		}
+		else if(a[i]=='F')
+			printf("Friday\n");
+		else if (a[i] == 'S')
+		{
+
+			char f;
+			f = getchar();
+			if (f == 'T' || f == 'M' || f == 'W' || f == 'F' || f == 'S') { i++; a[i] = f; goto B; }
+			if (f == 'u')
+			{
+				printf("Sunday\n");
+			}
+			else if (f == 'a')
+			{
+				printf("Saturday\n");
+			}
+			else
+			{
+				printf("Wrong data\n"); i++; a[i] = f; goto B;
+			}
+		}
+		else 
+			printf("Wrong data\n");
+		i++;
+	}
+}
+
+
+

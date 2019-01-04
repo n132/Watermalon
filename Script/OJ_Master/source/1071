@@ -1,0 +1,45 @@
+
+//Problem1071
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int year, month, day, d = 0;
+    while (scanf("%d-%d-%d", &year, &month, &day) != EOF)
+    {
+        switch (month)
+        {
+        case 12:d += 30;
+        case 11:d += 31;
+        case 10:d += 30;
+        case  9:d += 31;
+        case 8:d += 31;
+        case 7:d += 30;
+        case 6:d += 31;
+        case 5:d += 30;
+        case 4:d += 31;
+        case 3:if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+        {
+            d += 29;
+        }
+               else
+               {
+                   d += 28;
+               }
+ 
+        case 2:d += 31;
+        case 1:d += day;
+        }
+        printf("%d\n", d);
+        d = 0;
+    }
+ 
+}
+
+
+
+
+

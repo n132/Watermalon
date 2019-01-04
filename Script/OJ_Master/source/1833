@@ -1,0 +1,30 @@
+
+//Problem1833
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char str[700];
+	while (gets(str) != NULL)
+	{
+		if (strlen(str) >= 3)
+		{
+			for (int k = 0; k < strlen(str); k++)
+			{
+
+				if ((str[k] == 's' || str[k] == 'S')&&(str[k + 1] == 'A' || str[k + 1] == 'a')&&(str[k + 2] == 'l' || str[k + 2] == 'L')&&(str[k + 3] == 't' || str[k + 3] == 'T'))
+				{
+					printf("soy sauce");
+					k += 3;
+				}
+				else printf("%c", str[k]);
+			}
+		}
+		printf("\n");
+	}
+}
+
+
+

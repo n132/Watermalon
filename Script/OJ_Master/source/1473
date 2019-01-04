@@ -1,0 +1,27 @@
+
+//Problem1473
+
+
+#include<stdio.h>
+int main()
+{
+	double get, i;
+	scanf("%lf", &get);
+	if (get <= 10000)
+		i = 0.1*get;
+	else if (get <= 20000 && get > 10000)
+		i = 1000 + (get - 10000)*0.075;
+	else if (get <= 40000 && get > 20000)
+		i = 1000 + 750 + (get - 20000)*0.05;
+	else if (get <= 60000 && get > 40000)
+		i = 1000 + 750 + 1000 + (get - 10000)*0.03;
+	else if(get <= 100000 && get > 60000)
+		i = 1000 + 750 + 1000 + 600+(get - 10000)*0.015;
+	else 
+		i = 1000 + 750 + 1000 + 600 + 600+(get - 10000)*0.01;
+	printf("%.0lf", i);
+}
+
+
+
+

@@ -1,0 +1,70 @@
+
+//Problem2276
+
+
+#include<stdio.h>
+int main()
+{   
+     
+        int m[11];
+        int n[11];
+        int i;
+        int l, t;
+        while (scanf("%d", &m[0]) != EOF)
+        {
+            int money = 0;
+            int mid;
+            for (i = 1; i < 11; i++)
+            {
+                scanf("%d", &m[i]);
+            }
+            for (i = 0; i < 11; i++)
+            {
+                scanf("%d", &n[i]);
+            }
+ 
+            for (i = 0; i < 10; i++)
+            {
+                for (l = 0; l < 11 - i - 1; l++)
+                {
+                    if (m[l] < m[11 - 1 - i])
+                    {
+                        mid = m[l];
+                        m[l] = m[11 - 1 - i];
+                        m[11 - i - 1] = mid;
+                    }
+                }
+            }
+            for (i = 0; i < 10; i++)
+            {
+                for (l = 0; l < 11 - i - 1; l++)
+                {
+                    if (n[l] < n[11 - 1 - i])
+                    {
+                        mid = n[l];
+                        n[l] = n[11 - 1 - i];
+                        n[11 - i - 1] = mid;
+                    }
+                }
+            }
+            for (i = 0, t = 0; i < 11; i++)
+            {
+                if (m[t] > n[i])
+                {
+                    money++; t++;
+                }
+                else
+                {
+                    ;
+                }
+ 
+            }
+            printf("%d\n", money);
+ 
+        }
+             
+     
+}
+
+
+

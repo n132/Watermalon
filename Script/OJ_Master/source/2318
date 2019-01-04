@@ -1,0 +1,39 @@
+
+//Problem2318
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	int b;
+	int i;
+	int t = 0;
+	char c[1000];
+	char nn[1000];
+	gets(c);
+	b = strlen(c);
+	//for (i = 0; i < b; i++)
+	//{
+		for ( i = 0; i < strlen(c); i++)
+		{
+			if (c[i] >= 'A'&&c[i] <= 'Z')
+			{
+				nn[t] = c[i];
+				t++;
+			}
+			else if(c[i] >= 'a'&&c[i] <= 'z')
+			{
+				nn[t] = c[i];
+				t++;
+			}
+		}
+	
+	for ( i = 0; i < t; i++)
+	{
+		printf("%c", nn[i]);
+	}
+}
+
+
+

@@ -1,0 +1,44 @@
+
+//Problem1064
+
+
+
+
+#include<stdio.h>//得出输入了什么东西
+#include<string.h>
+#define EOF -1
+int main()
+{
+	int i;
+	int a = 0, b = 0, c = 0, d = 0;
+	char n[100000];
+
+	while (gets(n)!= NULL)
+	{
+		for (i = 0; i < strlen(n); i++)
+		{
+			if (n[i] >= 'a'&&n[i] <= 'z')
+				a = a + 1;
+			else if (n[i] >= 'A'&&n[i] <= 'Z')
+				a = a + 1;
+			else if (n[i] >= '1'&&n[i] <= '9')
+				b = b + 1;
+			else if (n[i] == '0')
+				b++;
+			else if (n[i] == ' ')
+				c = c + 1;
+			else
+				d = d + 1;
+		}
+		printf("%d ", a);
+		printf("%d ", b);
+		printf("%d ", c);
+		printf("%d\n", d);
+		a = b = c = d = 0;
+	}
+}
+
+
+
+
+

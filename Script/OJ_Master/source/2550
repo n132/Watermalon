@@ -1,0 +1,54 @@
+
+//Problem2550
+
+
+#include<stdio.h>
+int t[] = { 2 ,3 ,5 ,7 ,11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 };
+void solve(int a,int x[][25])
+{
+	for (int i = 0; i < 25; i++)
+	{
+		x[a][i] = x[a - 1][i];
+	}
+	int z = a;
+	for (int i = 0; i < 25;)
+	{
+		if (a%t[i] == 0)
+		{
+			a /= t[i];
+			x[z][i]++;
+		}
+		else 
+		{
+			i++;
+		}
+		if (a < t[i])break;
+	}
+	return;
+}
+int main()
+{
+	int x[101][25] = { 0 };
+	for (int i = 2; i <= 100; i++)
+	{
+		solve(i, x);
+	}
+	int n;
+	while (scanf("%d", &n) == 1)
+	{
+		printf("%d!=", n);
+		
+			for (int i = 0; i < 25; i++)
+			{
+				if (x[n][i] != 0)
+				{
+					printf(" %d", x[n][i]);
+				}
+			}
+			printf("\n");
+		
+	}
+}
+
+
+

@@ -1,0 +1,34 @@
+
+//Problem1420
+
+
+
+
+#include<math.h>
+#include<stdio.h>
+double f(int n)
+{
+	if (n == 1 || n == 0) return 1;
+	else return n*f(n - 1);
+
+}
+double t(double n,double x)
+{
+	if (n == 0) return x;
+	else return pow(-1, n - 1)*pow(x, n)*1.0 / f(n);
+}
+int main()
+{
+	int i;
+	double sum = 0;
+	double x, n;
+	scanf("%lf %lf",&x,&n);
+	for (i = 1; i <= n; i++)
+		sum += t(i, x);
+	printf("%.4lf", sum);
+}
+
+
+
+
+

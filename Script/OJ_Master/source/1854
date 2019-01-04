@@ -1,0 +1,21 @@
+
+//Problem1854
+
+
+#include<stdio.h>
+int main()
+{
+	int c[10000];
+	int n = 0, t = 0;
+	while (scanf("%d", &c[t]) != EOF)
+	{
+		t++;
+
+	}
+	for (n; n < t-1; n++)
+		printf("%d ", c[t - 1 - n]);
+	printf("%d\n", c[0]);
+}
+
+
+

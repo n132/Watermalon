@@ -1,0 +1,51 @@
+
+//Problem1748
+
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<malloc.h>
+struct x
+{
+	int n;
+	int i;
+	struct x *next;
+}*head,*tail,*p;
+int main()
+{
+	int n;
+	scanf("输入线性表的节点数N=%d；", &n);
+	p = (struct x*)(malloc((sizeof(struct x*))));
+	head = tail = p;
+	int i = 0;
+	while (i<n)
+	{
+		p = (struct x*)(malloc((sizeof(struct x*))));
+		tail ->next= p;
+		tail = p;
+		scanf("%d", &tail->n);
+		tail->i = i+2;
+		i++;
+	}
+	tail->next = NULL;
+	
+	p = head->next;
+	while (p->next!=NULL)
+	{
+		if (p->next->n == p->i*p->i - p->n)
+			p = p->next;
+		else
+		{
+			printf("false\n");
+			return 1;
+		}
+	}
+
+	printf("true\n");
+	return 0;
+
+
+}
+
+
+

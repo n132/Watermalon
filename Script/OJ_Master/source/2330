@@ -1,0 +1,21 @@
+
+//Problem2330
+
+
+#include<stdio.h>
+int main()
+{
+	double a, b;
+	while (scanf("%lf%lf",&a,&b)!=EOF)
+	{
+		if (b * 2 * 3.1415926 > a)
+		{
+			printf("你才到碗里去\n");
+		}
+		else
+			printf("敢不敢换个大点的碗\n");
+	}
+}
+
+
+

@@ -1,0 +1,53 @@
+
+//Problem1697
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char a[10000];
+	while (scanf("%s",a)==1)
+	{
+		int len = strlen(a);
+		int top = 0;
+		int lag = 1;
+		for (int i = 0; i < len; i++)
+		{
+			int now;
+			if (a[i] == 'B')now = 1;
+			else if (a[i] == 'F')now = 1;
+			else if (a[i] == 'P')now = 1;
+			else if (a[i] == 'V')now = 1;
+			else if (a[i] == 'C')now = 2;
+			else if (a[i] == 'G')now = 2;
+			else if (a[i] == 'J')now = 2;
+			else if (a[i] == 'K')now = 2;
+			else if (a[i] == 'Q')now = 2;
+			else if (a[i] == 'S')now = 2;
+			else if (a[i] == 'X')now = 2;
+			else if (a[i] == 'Z')now = 2;
+			else if (a[i] == 'D')now = 3;
+			else if (a[i] == 'T')now = 3;
+			else if (a[i] == 'L')now = 4;
+			else if (a[i] == 'M')now = 5;
+			else if (a[i] == 'N')now = 5;
+			else if (a[i] == 'R')now = 6;
+			else now = 0;
+			if (now != 0 && now != top)
+			{
+				lag = 0;
+				printf("%d", now);
+				
+			}top = now;
+			
+
+		}
+		 printf("\n");
+		
+	}
+	
+}
+
+
+

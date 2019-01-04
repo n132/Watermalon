@@ -1,0 +1,75 @@
+
+//Problem2481
+
+
+#include<string.h>
+#include<stdio.h>
+int solve(char a[], char b[])
+{
+	int flag = 0;
+	int n = strlen(a);
+	int m = strlen(b);
+	int t = 0;
+	for (int i = 0; i < n; i++)
+	{
+		for (int k = t; k < m; k++)
+		{
+			if (a[i] == b[k])
+			{
+				flag++;
+				t = k + 1;
+				break;
+			}
+		}
+	}
+	if (flag == n) return 1;
+	else return 0;
+}
+int main()
+{
+	int n;
+	while (scanf("%d",&n) != EOF)
+	{
+		struct 
+		{
+			char s[1000];
+			int len;
+		}m[101];
+		getchar();
+		for (int i = 0; i < n; i++)
+		{
+			gets(m[i].s); 
+		}
+		for (int i = 0; i < n; i++)
+		{
+			m[i].len = strlen(m[i].s);
+		}
+		for(int i=0;i<n-1;i++)
+			for (int k = 0; k < n - i - 1; k++)
+			{
+				if (m[k].len > m[n - i - 1].len)
+				{
+					m[100] = m[k];
+					m[k] = m[n - i - 1];
+					m[n - i - 1] = m[100];
+				}
+			}
+		int ct = 0;
+		for (int i = 0; i < n; i++)
+		{
+			for (int k = i + 1; k < n; k++)
+			{
+				if (solve(m[i].s, m[k].s) == 1)
+				{
+					ct++;
+					
+				}
+			}
+		}
+		printf("%d\n", ct);
+
+	}
+}
+
+
+

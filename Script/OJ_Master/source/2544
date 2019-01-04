@@ -1,0 +1,31 @@
+
+//Problem2544
+
+
+#include<stdio.h>
+int main()
+{
+ 
+    int q, w, e, r;
+    while (scanf("%d/%d * %d/%d", &q, &w, &e, &r) != EOF)
+    {
+        int t;
+        int i;
+        int n, m;
+        n = q*e;
+        m = w*r;
+        for (i = 1; i <= m; i++)
+        {
+            if (m%i == 0 && n%i == 0)
+            {
+                t = i;
+ 
+            }
+        }
+        if((n/t)%(m/t)!=0)printf("%d/%d * %d/%d = %d/%d\n", q, w, e, r, n / t, m / t);
+        else printf("%d/%d * %d/%d = %d\n", q, w, e, r, (n / t)/( m / t));
+    }
+}
+
+
+

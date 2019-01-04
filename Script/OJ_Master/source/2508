@@ -1,0 +1,119 @@
+
+//Problem2508
+
+
+#include<stdio.h>
+typedef struct node
+{
+	int x, y;
+}node;//定义一个结构体 用于保存节点 
+node start, end, spot[50*50]; //spot用于储存路径
+int now;
+int stack_empty(node spot[])
+//本来想要写个函数判断是不是空栈后来发现有了now就不需要了
+{
+	if (spot[0].x == -1)
+		return 1;
+	else return 0;
+}
+int stack_push(node *p,int now,char a[][50])//入栈操作 返回当前栈内节点个数
+{
+	now++;
+	a[p->x][p->y] = '~';//标记当前节点为走过
+	spot[now].x = p->x;
+	spot[now].y = p->y;
+	return now;//返回 now
+}
+node * stack_pop(void)//出栈操作返回当前栈顶的地址
+{
+	now--;//栈内节点个数减少
+	if (now < 0) return &spot[now + 1]; //空栈时候
+	return &spot[now];//返回当前栈顶的地址
+}
+void maze(int high,int wide,char a[][50])
+{
+	
+	int sx, sy, ex,ey;
+	for (int i = 0; i < high; i++)
+	{
+		for (int k = 0; k < wide; k++)
+		{
+			scanf("%c", &a[i][k]);
+			if (a[i][k] == 'W')
+			{
+				sx = i;
+				sy = k;
+			}
+			if (a[i][k] == 'G')
+			{
+				ex = i;
+				ey = k;
+				a[i][k] = '.';
+			}
+		}getchar();
+	}//输入地图
+	node *p=&spot[0];
+	p->x = sx, p->y = sy;
+	while (1)
+	{  //以下为判断是否结束
+		if(p->x==ex&&p->y==ey)
+		{
+			printf("Good life\n");
+			/*printf("Path:\n");
+			printf("[%d,%d]->", sx, sy);
+			for (int i = 1; i < now; i++)
+			{
+				printf("[%d,%d]->", spot[i].x, spot[i].y);
+			}
+			printf("[%d,%d]\n", ex, ey);
+			printf("The lenth of the Path is %d\n", now);*/
+			break;
+		}
+		if (now == -1)
+		{
+			printf("Mission Failed\n");
+			break;
+		}
+		//四个方向进行搜索 一旦搜索到就沿着可走的路走
+		if (p->x + 1 < 5 && a[p->x + 1][p->y] == '.')
+		{
+			p->x++;
+			now=stack_push(p, now,a);
+		}
+		else if (p->y + 1 < 5 && a[p->x][p->y+1] == '.')
+		{
+			p->y++;
+			now=stack_push(p, now,a);
+			
+		}
+		else if (p->x - 1 > -1 && a[p->x -1][p->y] == '.')
+		{
+			p->x--;
+			now=stack_push(p, now,a);
+		
+		}
+		else if (p->y-1 > -1 && a[p->x][p->y-1] == '.')
+		{
+			p->y--;
+			now=stack_push(p, now,a);
+			
+		}
+		else p=stack_pop();//如果走投无路那么退一步
+	//	printmap(a);  //在测试的时候用来显示每一步
+	}
+	
+}
+int main()
+{
+	int high,wide;
+	while (scanf("%d%d", &high, &wide) == 2)
+	{			
+        	getchar();//吃掉回车
+			now = 0;//每次都要重置一下栈内元素数目
+			char a[50][50];//地图
+			maze(high,wide,a);
+	}
+}
+
+
+

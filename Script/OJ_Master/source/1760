@@ -1,0 +1,36 @@
+
+//Problem1760
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char str[700][300];
+	int i = 0;
+	while (gets(str[i]) != NULL)
+	{
+		if (strlen(str[i]) >= 3) 
+		{
+			for (int k = 0; k <= strlen(str[i]) - 3; k++)
+			{
+				if (str[i][k] == 's' || str[i][k] == 'S')
+				{
+					if (str[i][k + 1] == 'A' || str[i][k + 1] == 'a')
+					{
+					if (str[i][k + 2] == 'l' || str[i][k + 2] == 'L')
+					{
+						if (str[i][k + 3] == 't' || str[i][k + 3] == 'T')
+							{
+								printf("%s\n", str[i]);
+							}
+						}
+					}
+				}
+			}i++;
+		}
+	}
+}
+
+
+

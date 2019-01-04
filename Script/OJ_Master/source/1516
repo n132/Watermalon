@@ -1,0 +1,26 @@
+
+//Problem1516
+
+
+#include<string.h>
+#include<stdio.h>
+int main()
+{
+	int i, t, n;
+	char c[10000];
+
+	scanf("%d", &t);
+	//getchar();
+	
+		scanf("%s", c);
+//	getchar();
+	scanf("%d", &n);
+	for (i = n-1; i < t; i++)
+	{
+		printf("%c", c[i]);
+	}
+
+}
+
+
+

@@ -1,0 +1,19 @@
+
+//Problem1922
+
+
+#include<stdio.h>
+int main()
+{
+	int i,b[4];
+	char a[5];
+	gets(a);
+	for (i = 0; i < 4; i++)
+	{
+	b[i]=a[i] -= '0';
+	}
+	printf("%d", b[1] + b[2] + b[3] + b[0]);
+}
+
+
+

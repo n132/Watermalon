@@ -1,0 +1,15 @@
+
+//Problem1489
+
+
+#include<math.h>
+#include<stdio.h>
+int main()
+{
+	int n;
+	scanf("%d", &n);
+	printf("%.3lf\n", sqrt(n));
+}
+
+
+

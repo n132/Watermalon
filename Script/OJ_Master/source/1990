@@ -1,0 +1,32 @@
+
+//Problem1990
+
+
+#include<stdio.h>
+int zh(int m,int n)
+{
+	
+	int a, b, c;
+	if (n > m - n)
+		n = m - n;
+	if (n == 0) return 1;
+	else if (n == 1) return m;
+	else 
+	{
+		a = zh(m - 1, n);
+		b = zh(m - 1, n - 1);
+		c = a + b;
+		return c;
+	}
+			
+}
+int main()
+{
+	int m, n;
+	scanf("%d %d", &m, &n);
+	printf("%d", zh(m, n));
+
+}
+
+
+

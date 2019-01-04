@@ -1,0 +1,70 @@
+
+//Problem2548
+
+
+#include<stdio.h>
+#include<math.h>
+int zz(int n)
+{
+    int a[1000];
+    int t = 0;
+    while (n != 0)
+    {
+        a[t] = n % 10;
+        t++;
+        n /= 10;
+    }
+    for (int i = 0; i < t - 1; i++)
+    {
+        for (int k = 0; k < t - 1 - i; k++)
+        {
+            if (a[k] > a[t - i - 1])
+            {
+                int yy;
+                yy = a[k];
+                a[k] = a[t - i - 1];
+                a[t - i - 1] = yy;
+            }
+        }
+    }
+    int max=0, min=0;
+    for (int i = 0; i < t; i++)
+    {
+        max= max * 10 + a[i];
+    }
+    for (int i = 0; i < t; i++)
+    {
+        min = min * 10 + a[t - i - 1];
+    }
+    return min-max;
+}
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    int t=0;
+    int a[1000];
+    printf("%d", n);
+    while (1)
+    {
+        int i;
+     
+        for ( i = 0; i < t; i++)
+        {
+            if (a[i] == n)
+            {
+                goto end;
+            }
+        }
+        printf("->");
+        n = zz(n);
+        printf("%d", n);
+        t++;
+        a[t] = n;
+    }
+end: 1 == 1;
+ 
+}
+
+
+

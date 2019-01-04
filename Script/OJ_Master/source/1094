@@ -1,0 +1,31 @@
+
+//Problem1094
+
+
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{ 
+float a,b,c,n;
+float x1,x2;
+scanf("%f %f %f",&a,&b,&c);
+
+
+n=sqrt(b*b-4*a*c);
+
+x1=(-b+n)/(2*a);
+x2=(-b-n)/(2*a);
+printf("%.2f %.2f",x1,x2);
+
+
+
+
+}
+
+
+
+
+

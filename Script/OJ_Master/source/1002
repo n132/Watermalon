@@ -1,0 +1,42 @@
+
+//Problem1002
+
+
+
+
+#include<stdio.h>
+int main()
+{
+	int a, b;
+	while (scanf("%d/%d",&a,&b))
+	{
+		int ans = 10;
+		if (a == 0 && b == 0) break;
+		if (a < 7)
+		{
+			printf("%d\n",ans);
+		}
+		else {
+			
+			if (a >= 8) b += (a - 7) * 31;
+			if (b > 1) ans--;
+			if (b > 3) ans--;
+			if (b > 6) ans--;
+			if (b > 10) ans--;
+			if (b > 15) ans--;
+			if (b > 21) ans--;
+			if (b > 28) ans--;
+			if (b > 36) ans--;
+			if (b > 45) ans--;
+			if (b > 55) ans--;
+
+			printf("%d\n", ans);
+
+		}
+	}
+}
+
+
+
+
+

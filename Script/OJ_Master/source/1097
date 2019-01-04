@@ -1,0 +1,38 @@
+
+//Problem1097
+
+
+
+
+#include<stdio.h>
+
+int main()
+{
+	int f[100][100];
+	int n, m, i,j;
+	scanf("%d", &n);
+	m = n;
+
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < m; j++)
+		{
+			scanf("%d", &f[i][j]);
+		}
+	}
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < m-1; j++)
+		{
+			printf("%d ", f[j][i]);
+
+		}printf("%d\n", f[m-1][i]);
+		
+	}
+
+}
+
+
+
+
+

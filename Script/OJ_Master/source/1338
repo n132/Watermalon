@@ -1,0 +1,55 @@
+
+//Problem1338
+
+
+
+
+#include<stdio.h>
+#define L 100
+int max(int a, int b)
+{
+	if (a > b) return a;
+	else return b;
+}
+int main()
+{
+	int n;
+	scanf("%d", &n);
+	for (int t = 0; t < n; t++)
+	{
+		int n;
+		scanf("%d", &n);
+		int a[L][L];
+		for (int i = 0; i < n; i++)
+		{
+			for (int k = 0; k <= i; k++)
+			{
+				scanf("%d", &a[i][k]);
+			}
+		}
+		for (int i = 1; i < n; i++)
+		{
+			for (int k = 0; k <= i; k++)
+			{
+				if (k == 0) a[i][k] += a[i - 1][0];
+				else if (k == i)a[i][k] += a[i - 1][i - 1];
+				else
+				{
+					a[i][k] += max(a[i - 1][k - 1], a[i - 1][k]);
+				}
+			}
+		}
+		int max = -999999;
+		for (int i = 0; i < n; i++)
+		{
+			if (a[n - 1][i] > max)
+				max = a[n - 1][i];
+		}
+		printf("%d\n", max);
+	}
+}
+
+
+
+
+

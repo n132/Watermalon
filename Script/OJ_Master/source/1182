@@ -1,0 +1,39 @@
+
+//Problem1182
+
+
+
+
+#include<stdio.h>
+int main()
+{
+	int j;
+	int i,k;
+	int n;
+	scanf("%d", &n);
+	for (k = 0; k < n; k++)
+	{
+		for (i = 0; i < n - 1 - k; i++)
+			printf(" ");
+		for (j = 1; j < k + 2; j++)
+			printf("%d", j);
+		for (j = j - 2; j > 0; j--)
+			printf("%d", j);
+		printf("\n");
+	}
+	for (k = k - 1; k > 0; k--)
+	{
+		for (i = 0; i < n - k; i++)
+			printf(" ");
+		for (j = 1; j < k+1; j++)
+			printf("%d", j);
+		for (j = j - 2; j > 0; j--)
+			printf("%d", j);
+		printf("\n");
+	}
+}
+
+
+
+
+

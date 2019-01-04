@@ -1,0 +1,36 @@
+
+//Problem1975
+
+
+#include<stdio.h>
+int main()
+{
+	int n;
+	while (scanf("%d", &n) != EOF)
+	{
+		int flag = 0;
+		for (int i = 1; i < n; i++)
+		{
+			int sum = 0;
+			for (int k = i; k < n; k++)
+			{
+				sum += k;
+				if (sum == n)
+				{
+					printf("%d~%d\n", i, k);
+					flag = 1;
+					break;
+				}
+				if (sum > n)
+				{
+					break;
+				}
+			}
+
+		}
+		if (flag == 0) printf("No answer!\n");
+	}
+}
+
+
+

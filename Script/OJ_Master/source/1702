@@ -1,0 +1,38 @@
+
+//Problem1702
+
+
+#include<stdio.h>
+//1702: Mincost  -----出租车 计价  水题
+int luchen(double n)
+{
+	double t = n+0.00001;
+	return (int )t;
+}
+double ct(int n)
+{
+	if (n <= 4) return 10;
+	else if (n <= 8) return 2 + 2 * n;
+	else
+	{
+		if ((n - 1) / 4 % 2 == 0)
+		{
+			return ((n - 1) % 4 + 1)*2.4 + (n - 1) / 8 * 18;
+		}
+		else
+		{
+			return ((n - 1) % 4 + 1) * 2 + (n - 1) / 8 * 18+10;
+		}
+	}
+}
+int main()
+{
+	double n;
+	while (scanf("%lf",&n),n)
+	{
+		printf("%g\n", ct(luchen(n)));
+	}
+}
+
+
+

@@ -1,0 +1,27 @@
+
+//Problem1471
+
+
+#include<stdio.h>
+int main()
+{
+	int i, k;
+	scanf("%d",&i);
+	k = i / 10;
+	if (k < 6)
+		printf("E");
+	else if (k == 6)
+		printf("D");
+	else if (k == 7)
+		printf("C");
+	else if (k == 8)
+		printf("B");
+	else if (k >=9)
+		printf("A");
+		 
+
+}
+
+
+
+

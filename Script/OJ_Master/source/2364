@@ -1,0 +1,12 @@
+
+//Problem2364
+
+
+#include<stdio.h>
+int main()
+{
+	printf("A=1, B=0, C=9, D=8\n");
+}
+
+
+

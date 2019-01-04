@@ -1,0 +1,25 @@
+
+//Problem1849
+
+
+#include<string.h>
+#include<stdio.h>
+int main()
+{
+	int i;
+	char a[10000];
+	char str[10000];
+	gets(str);
+	for (i = 0; i < strlen(str); i++)
+	{
+		a[i]=str[strlen(str) - 1 - i];
+	}
+	a[i] = '\0';
+	if (strcmp(str, a) == 0)
+		printf("是回文\n");
+	else
+		printf("不是回文\n");
+}
+
+
+

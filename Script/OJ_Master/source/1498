@@ -1,0 +1,30 @@
+
+//Problem1498
+
+
+#include<stdio.h>
+int main()
+{
+	int i,t;
+	int a[3][3];
+	for (t = 0; t < 3; t++)
+	{
+		for(i = 0; i < 3; i++)
+		{
+			scanf("%d", &a[t][i]);
+		}
+	}
+	for (t = 0; t < 3; t++)
+	{
+		for(i = 0; i < 2; i++)
+		{
+			printf("%d ", a[i][t]);
+
+		}printf("%d \n", a[i][t]);
+	}
+	
+
+}
+
+
+

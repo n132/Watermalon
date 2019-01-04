@@ -1,0 +1,82 @@
+
+//Problem1992
+
+
+#include<stdio.h>
+#include<math.h>
+int nine(int n)
+{
+	int a[100];
+	int i, t, k = 0, w;
+	t = n;
+	while (t != 0)
+	{
+		t = t / 10;
+		k++;
+	}
+	w = k;
+	t = 0;
+	while (k>0)
+	{
+
+
+		a[t] = n / pow(10, k - 1);
+		n -= a[t] * pow(10, k - 1);
+		t++; k--;
+	}
+	for (i = 0; i < w / 2; i++)
+	{
+		if (a[i] != a[w - 1 - i])
+			t = 1;
+	}
+	if (t == 1)
+		return 0;
+	else
+		return 1;
+
+}
+int nie(int n)
+{
+	for (int i = 2; i < n; i++)
+	{
+		if (n%i == 0)
+			return 0;
+
+	}
+	return 1;
+}
+
+int main()
+{
+	int k = 0;
+	int i;
+	int n,m;
+	int a[10000];
+	int t = 0;
+	scanf("%d %d", &n, &m);
+	for (i = n; i < m; i++)
+	{
+		if (nine(i) == 1)
+		{
+			if (nie(i) == 1)
+			{
+				a[t] = i; t++;
+			}
+		}
+	}
+	for (i = 0; i < t; i++)
+	{
+		printf("%6d",a[i]);
+		k++;
+		if (k == 5)
+		{
+			k = 0;
+			printf("\n");
+		}
+	}
+
+
+}
+
+
+

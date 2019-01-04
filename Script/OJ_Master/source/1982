@@ -1,0 +1,63 @@
+
+//Problem1982
+
+
+#include<stdio.h>
+int main()
+{
+	int g=1;
+	double sum=0,ans;
+	double max, min;
+	int i, k,t;
+	double a[40][20];
+	int n,m;
+	double b[40];
+	scanf("%d,%d", &n, &m);
+	for (i = 0; i < n; i++)
+	{
+		for (k = 0; k < m; k++)
+		{
+			scanf("%lf", &a[i][k]);
+		}
+	}
+	for (i = 0; i < n; i++)
+	{
+		max = a[i][0];
+		min = a[i][0];
+		for (k = 0; k < m; k++)
+		{
+			if (a[i][k] > max)
+			{
+				max = a[i][k];
+			}
+			if (a[i][k] < min)
+			{
+				min = a[i][k];
+			}
+			sum += a[i][k];
+		}
+		ans = (sum - max - min) / (m - 2);
+		b[i] = ans;
+		sum = 0;
+	}
+	max = b[0]; k = 0;
+	for (i = 0; i < n; i++) 
+	{
+		for (t = 0; t < n; t++)
+		{
+			if (b[t] > max)
+			{
+				max = b[t];
+				k = t;
+			}
+
+		}printf("第%d名:%d号选手,得分%.2lf\n", g, k+1, max);
+		g++;
+		max = -1;
+		b[k] = -1;
+	}
+	
+}
+
+
+

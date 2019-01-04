@@ -1,0 +1,33 @@
+
+//Problem2048
+
+
+#include<stdio.h>
+#include<string.h>
+int roots(int n)
+{
+	int sum = 0;
+	if (n < 10) return n;
+	else
+	{
+		while (n/10!=0)
+		{
+			sum += n % 10;
+			n /= 10;
+		}
+
+		return roots(sum+n);
+	}
+}
+int main()
+{
+	int n;
+	while (scanf("%d",&n),n)
+	{
+
+		printf("%d\n", roots(n));
+	}
+}
+
+
+

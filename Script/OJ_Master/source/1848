@@ -1,0 +1,38 @@
+
+//Problem1848
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int o;
+    int t = 0;
+    int i = 0;
+    char str[10000];
+    char a[10000], b[10000],c[10000];
+    while (scanf("%c",&str[i]),1)
+    {
+        a[i] = str[i];
+        i++;
+        if (str[i-1] == '&')
+             
+            break;
+         
+    }
+    a[i-1] = '\0';
+    scanf("%s",b);
+    for (o = 0; o < strlen(b); o++)
+    {
+        c[o] = b[strlen(b) - 1-o];
+    }
+    c[o] = '\0';
+ 
+    if (strcmp(a, c) == 0)
+        printf("YES\n");
+    else
+        printf("NO\n");
+}
+
+
+

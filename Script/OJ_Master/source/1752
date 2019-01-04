@@ -1,0 +1,31 @@
+
+//Problem1752
+
+
+#include<stdio.h>
+int main()
+{
+	int a[1000];
+	int i = 0;
+	while (scanf("%d", &a[i]), a[i] != -1)
+	{
+		i++;
+	}
+
+	int m;
+	scanf("%d", &m);
+	for (int k = 0; k < i; k++)
+	{
+		if (a[i] == m)
+		{
+			printf("%d\n", &a[i]); return 1;
+		}
+		
+	}
+
+
+printf("0\n");
+}
+
+
+

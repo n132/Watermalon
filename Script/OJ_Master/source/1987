@@ -1,0 +1,34 @@
+
+//Problem1987
+
+
+#include<stdio.h>
+int main()
+{
+	int i, k;
+	int n;
+	float a[6][6];
+	float b[6][6];
+	scanf("%d", &n);
+	for (k = 0; k < n; k++)
+	{
+		for (i = 0; i < n; i++)
+			scanf("%f", &a[k][i]);
+	}
+	for (k = 0; k < n; k++)
+	{
+		for (i = 0; i < n; i++)
+		b[k][i]= a[k][i] / a[k][k];
+	}
+	for (k = 0; k < n; k++)
+	{
+		for (i = 0; i < n - 1; i++)
+			printf("%.2f ", b[k][i]);
+		printf("%.2f\n", b[k][i]);
+
+	}
+
+}
+
+
+

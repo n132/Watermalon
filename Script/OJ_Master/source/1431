@@ -1,0 +1,32 @@
+
+//Problem1431
+
+
+#include<stdio.h>
+int main()
+{
+	int i, m;
+	float max = -99999, min = 99999, n[100];
+
+	scanf("%d",&m);
+	for (i = 0; i < m; i++)
+	{
+		scanf("%f", &n[i]);
+	}
+	for (i = 0; i < m; i++)
+	{
+		if (n[i] > max)
+			max = n[i];
+	}
+	for (i = 0; i < m; i++)
+	{
+		if (n[i] < min)
+			min = n[i];
+	}
+	printf("%.2f %.2f",max,min);
+
+}
+
+
+
+

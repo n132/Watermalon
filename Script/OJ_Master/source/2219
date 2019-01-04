@@ -1,0 +1,30 @@
+
+//Problem2219
+
+
+#include<string.h>
+#include<stdio.h>
+int main()
+{
+	int t = 0,i = 0;
+	char n[1001];
+	while (gets(n) != NULL)
+	{
+		for (i = 0; i < strlen(n); i++)
+		{
+			if (n[i] >= 'A'&&n[i] <= 'Z')
+				n[i] += 'a' - 'A';
+		
+		}
+		for (i = 0; i < strlen(n); i++)
+		{
+			printf("%c", n[i]);
+		}printf("\n");
+}
+	
+		
+	
+}
+
+
+

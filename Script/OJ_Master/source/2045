@@ -1,0 +1,41 @@
+
+//Problem2045
+
+
+#include <stdio.h>
+#include<string.h>
+
+int main()
+{
+	char str[100];
+	char des[100];
+	while (scanf("%s", str) == 1)
+	{
+		int len = strlen(str);
+		int count = 0;
+		int j = 0;
+		for (int i = len - 1; i >= 0; i--)
+		{
+			if (str[i] != ',')
+			{
+				des[j++] = str[i];
+				count += 1;
+				if (count == 3)
+				{
+					des[j++] = ',';
+					count = 0;
+				}
+			}
+		}
+		if (j % 4 == 0)j -= 1;
+		for (int i = j - 1; i >= 0; i--)
+		{
+			printf("%c", des[i]);
+		}
+		printf("\n");
+	}
+
+}
+
+
+

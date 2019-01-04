@@ -1,0 +1,38 @@
+
+//Problem2313
+
+
+#include<stdio.h>
+int main()
+{
+	int a[10];
+	for (int i = 0; i < 10; i++)
+	{
+		scanf("%d", &a[i]);
+	}
+	int c[10] = { 0 };
+	for (int i = 0; i < 10; i++)
+	{
+		for (int k = i; k < 10; k++)
+		{
+			if (a[i] == a[k])
+			{
+				c[i]++;
+			}
+		}
+	}
+	int max = -1;
+	int flag = 0;
+	for (int i = 0; i < 10; i++)
+	{
+		if (c[i] > max)
+		{
+			max = c[i];
+			flag = i;
+		}
+	}
+	printf("%d\n%d", a[flag], max);
+}
+
+
+
