@@ -25,14 +25,12 @@ sudo apt-get install zsh -y
 sudo apt-get install git -y
 sudo wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
 chsh -s /usr/bin/zsh
+# pwngdb
+cd ~/
+git clone https://github.com/scwuaptx/Pwngdb.git
+cp ~/Pwngdb/.gdbinit ~/
 # install gcc multiple library
 sudo apt-get install gcc-multilib -y
-# install qemu
-sudo apt-get install qemu -y
-# install pwndbg
-git clone https://github.com/pwndbg/pwndbg
-cd pwndbg
-./setup.sh
 # install peda
 git clone https://github.com/longld/peda.git ~/peda
 echo "source ~/peda/peda.py" >> ~/.gdbinit
@@ -40,18 +38,18 @@ echo "source ~/peda/peda.py" >> ~/.gdbinit
 sudo apt-get install ruby -y
 sudo apt-get install gem -y
 gem install one_gadget
+# install qemu
+#sudo apt-get install qemu -y
+# install pwndbg
+#git clone https://github.com/pwndbg/pwndbg
+#cd pwndbg
+#./setup.sh
 # install libc-database
-git clone https://github.com/niklasb/libc-database
-cd libc-database
-./get
-cd
-
-# pwngdb
-cd ~/
-git clone https://github.com/scwuaptx/Pwngdb.git 
-cp ~/Pwngdb/.gdbinit ~/
-
+#git clone https://github.com/niklasb/libc-database
+#cd libc-database
+#./get
+#cd
 # seccomp
-cd
-sudo apt-get install -y ruby-dev -y
-sudo gem install seccomp-tools
+#cd
+#sudo apt-get install -y ruby-dev -y
+#sudo gem install seccomp-tools
