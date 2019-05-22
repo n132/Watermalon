@@ -23,6 +23,7 @@ sudo pip install angr
 # install zsh
 sudo apt-get install zsh -y
 sudo apt-get install git -y
+sudo apt-get install wget -y
 sudo wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
 chsh -s /usr/bin/zsh
 # pwngdb
