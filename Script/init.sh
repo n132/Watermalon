@@ -26,15 +26,14 @@ sudo apt-get install git -y
 sudo apt-get install wget -y
 sudo wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
 chsh -s /usr/bin/zsh
-# pwngdb
-cd ~/
-git clone https://github.com/scwuaptx/Pwngdb.git
-cp ~/Pwngdb/.gdbinit ~/
 # install gcc multiple library
 sudo apt-get install gcc-multilib -y
 # install peda
 git clone https://github.com/longld/peda.git ~/peda
 echo "source ~/peda/peda.py" >> ~/.gdbinit
+cd ~/
+git clone https://github.com/scwuaptx/Pwngdb.git
+cp ~/Pwngdb/.gdbinit ~/
 # install one_gadget
 sudo apt-get install ruby -y
 sudo apt-get install gem -y
