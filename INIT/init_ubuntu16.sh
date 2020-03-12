@@ -20,7 +20,7 @@ sudo pip install --upgrade pwntools
 # install angr
 #sudo apt-get install python-dev libffi-dev build-essential
 #sudo pip install angr
-# install zsh
+# install zsh   
 sudo apt-get install zsh
 sudo apt-get install git
 sudo wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
