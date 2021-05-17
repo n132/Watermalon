@@ -2,12 +2,11 @@
 sudo passwd
 # update
 sudo apt update
-sudo apt install vim gdb wget git curl nmap zsh pip -y
+sudo apt install vim gdb wget git curl nmap zsh python pip -y
 # remove useless software
 sudo apt remove libreoffice-common thunderbird totem rhythmbox simple-scan gnome-mahjongg aisleriot gnome-mines cheese transmission-common gnome-orca deja-dup
 sudo apt autoremove -y
 # install pip
-sudo apt install python -y
 # install ipython
 sudo apt-get install ipython
 # install pwntools
