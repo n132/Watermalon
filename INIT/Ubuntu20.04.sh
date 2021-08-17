@@ -4,17 +4,17 @@ sudo passwd
 sudo apt update
 sudo apt install vim gdb wget git curl nmap zsh python pip -y
 # remove useless software
-sudo apt remove libreoffice-common thunderbird totem rhythmbox simple-scan gnome-mahjongg aisleriot gnome-mines cheese transmission-common gnome-orca deja-dup
+sudo apt remove libreoffice-common thunderbird totem rhythmbox simple-scan gnome-mahjongg aisleriot gnome-mines cheese transmission-common gnome-orca deja-dup -y
 sudo apt autoremove -y
 # install pip
 # install ipython
-sudo apt-get install ipython
+sudo apt-get install ipython3 -y
 # install pwntools
-sudo apt-get install python2.7 python-dev git libssl-dev libffi-dev build-essential -y
-sudo pip install --upgrade pwntools
+# sudo apt-get install python2.7 python-dev git libssl-dev libffi-dev build-essential -y
+sudo pip3 install pwntools
 # install on-my-zsh   
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-chsh -s /usr/bin/zsh
+#chsh -s /usr/bin/zsh
 
 # sudo apt-get install gcc-multilib
 # sudo apt-get install qemu
