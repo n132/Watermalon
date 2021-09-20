@@ -27,3 +27,4 @@ Write-Color -Text " "
 Import-Module posh-git
 Import-Module oh-my-posh
 Set-PoshPrompt Paradox
+#1
